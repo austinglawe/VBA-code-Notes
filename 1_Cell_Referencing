@@ -1,5 +1,0 @@
-Sub cell_referencing()
-
-  ActiveCell.Value = "Test1"
-  ActiveCell.Value = 40
-  
