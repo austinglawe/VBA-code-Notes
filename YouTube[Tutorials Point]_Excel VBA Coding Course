@@ -129,7 +129,22 @@ __________________________________________________
 
 4 | Excel VBA - Record a Macro
 
-
+Sub Color()
+'
+' Color Macro
+' This macro will color the cells
+'
+' Keyboard Shortcut: Ctrl+Shift+A
+'
+  With Selection.Interior
+    .Pattern = xlSolid
+    .PatternColorIndex = xlAutomatic
+    .Color = 65535
+    .TintAndShade = 0
+    .PatternTintAndShade = 0
+  End With
+  ActiveCell.Offset(0,2).Range("A1").Select
+End Sub 
 __________________________________________________
 
 5 | Excel VBA - Save a Macro Workbook
@@ -139,11 +154,30 @@ __________________________________________________
 
 6 | Excel VBA - Write a Simple Macro
 
+Sub first_Macro()
+
+  MsgBox "TutorialsPoint"
+
+  MsgBox 100
+
+End Sub
 
 __________________________________________________
 
 7 | Excel VBA - Cell Referencing
 
+Sub cell_referencing()
+  ActiveCell.Value = "Tutorial"
+  ActiveCell.Value = 40
+  [B5].Value = 70
+  [C1:C10] = "Tutorials"
+  '2nd Most Commonly Used Method is Below
+  Cells(8, 2).Value = "India"
+  'Most Commonly Used Method is Below
+  Range("A1").Value = "Mumbai"
+  Range("A2:A10") = "Jakarta"
+
+End Sub
 
 __________________________________________________
 
