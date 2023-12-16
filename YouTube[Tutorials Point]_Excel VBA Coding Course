@@ -230,6 +230,21 @@ __________________________________________________
 
 10 | Excel VBA - With Block
 
+Sub with_block()
+  
+  Range("A1:A10") = "Tutorials"
+
+  With Range("A1:A10").font
+    .Name = "Arial"
+    .Bold = True
+    .Bold = False
+    .Italic = True
+    .Italic = False
+    .Size = 10
+    .Size = 20
+  End With
+
+End Sub
 
 __________________________________________________
 
