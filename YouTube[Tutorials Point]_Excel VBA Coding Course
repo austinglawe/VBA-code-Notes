@@ -167,12 +167,18 @@ __________________________________________________
 7 | Excel VBA - Cell Referencing
 
 Sub cell_referencing()
+
   ActiveCell.Value = "Tutorial"
+
   ActiveCell.Value = 40
+
   [B5].Value = 70
+
   [C1:C10] = "Tutorials"
+
   '2nd Most Commonly Used Method is Below
   Cells(8, 2).Value = "India"
+  
   'Most Commonly Used Method is Below
   Range("A1").Value = "Mumbai"
   Range("A2:A10") = "Jakarta"
@@ -183,12 +189,43 @@ __________________________________________________
 
 8 | Excel VBA - Copy Paste
 
+Sub Copy_Paste()
+
+  Range("A1:A10") = "Tutorials"
+
+  '1st Method
+  Range("B1:B10") = Range("A1:A10").Value
+
+  '2nd Method
+  Range("A1:A10").Copy
+  Range("D1:D10").PasteSpecial
+  Application.CutCopyMode = False
+
+End Sub
 
 __________________________________________________
 
 9 | Excel VBA - Font
 
+Sub Font()
 
+  Range("A1:A10") = "Tutorials"
+  Range("A1:A10").font.Name = "Arial"
+  Range("A1:A10").font.Bold = True
+  Range("A1:A10").font.Size = 20
+  Range("A1:A10").font.Name = "Algerian"
+  Range("A1:A10").font.Name = "Arial"
+  Range("A1:A10").font.Size = 20
+  Range("A1:A10").font.Bold = True
+  Range("A1:A10").font.Bold = False
+  Range("A1:A10").font.Italic = True
+  Range("A1:A10").font.Italic = False
+  Range("A1:A10").font.Underline = True
+  Range("A1:A10").font.Underline = False
+  Range("A1:A10").font.Strikethrough = True
+  Range("A1:A10").font.Strikethrough = False
+
+End Sub
 __________________________________________________
 
 10 | Excel VBA - With Block
