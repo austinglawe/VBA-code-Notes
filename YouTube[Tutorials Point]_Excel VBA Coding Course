@@ -1,4 +1,4 @@
-To Start here are the videos in order as they show on the playlist.
+To Start here are the videos in order as they show up on the playlist.
 
 Playlist # | Video Name | Length | Playlist Video Link
 1 | Excel VBA - Introduction | 5 Min 1 Sec | https://www.youtube.com/watch?v=FGQ0P9jTjU0&list=PLWPirh4EWFpEFSYTbKaST6hSlgIFCJjU3&index=1&ab_channel=Tutorialspoint
@@ -80,7 +80,7 @@ Playlist # | Video Name | Length | Playlist Video Link
 77 | Excel VBA - Create Functions | 2 Min 45 Sec | https://www.youtube.com/watch?v=j6hmdfu5A5U&list=PLWPirh4EWFpEFSYTbKaST6hSlgIFCJjU3&index=77&ab_channel=Tutorialspoint
 78 | Excel VBA - Date Add | 5 Min 47 Sec | https://www.youtube.com/watch?v=TCPiP79lrqM&list=PLWPirh4EWFpEFSYTbKaST6hSlgIFCJjU3&index=78&ab_channel=Tutorialspoint
 79 | Excel VBA - Date Part | 3 Min 11 Sec | https://www.youtube.com/watch?v=U7sq6pfnXZs&list=PLWPirh4EWFpEFSYTbKaST6hSlgIFCJjU3&index=79&ab_channel=Tutorialspoint
-80 | Excel VBA - DD.MM.YYYY | 1 Min 38 Sec | https://www.youtube.com/watch?v=LxQ3RU8YoLw&list=PLWPirh4EWFpEFSYTbKaST6hSlgIFCJjU3&index=80&ab_channel=Tutorialspoint
+80 | Excel VBA - DD/MM/YYYY | 1 Min 38 Sec | https://www.youtube.com/watch?v=LxQ3RU8YoLw&list=PLWPirh4EWFpEFSYTbKaST6hSlgIFCJjU3&index=80&ab_channel=Tutorialspoint
 81 | Excel VBA - Dates | 3 Min 38 Sec | https://www.youtube.com/watch?v=dRwwCRhrsyQ&list=PLWPirh4EWFpEFSYTbKaST6hSlgIFCJjU3&index=81&ab_channel=Tutorialspoint
 82 | Excel VBA - Time Function Part 1 | 4 Min 4 Sec | https://www.youtube.com/watch?v=XmAS2NBFbaA&list=PLWPirh4EWFpEFSYTbKaST6hSlgIFCJjU3&index=82&ab_channel=Tutorialspoint
 83 | Excel VBA - Time Function Part 2 | 3 Min 0 Sec | https://www.youtube.com/watch?v=JAp_kuKu7lE&list=PLWPirh4EWFpEFSYTbKaST6hSlgIFCJjU3&index=83&ab_channel=Tutorialspoint
@@ -101,3 +101,513 @@ Playlist # | Video Name | Length | Playlist Video Link
 98 | Excel VBA - Background | 6 Min 13 Sec | https://www.youtube.com/watch?v=FeBge6LMmTw&list=PLWPirh4EWFpEFSYTbKaST6hSlgIFCJjU3&index=98&ab_channel=Tutorialspoint
 99 | Excel VBA - Text Box | 7 Min 58 Sec | https://www.youtube.com/watch?v=JwE4vVqE7CQ&list=PLWPirh4EWFpEFSYTbKaST6hSlgIFCJjU3&index=99&ab_channel=Tutorialspoint
 100 | Excel VBA - User Form Event | 2 Min 53 Sec | https://www.youtube.com/watch?v=0ikwkEqHhlQ&list=PLWPirh4EWFpEFSYTbKaST6hSlgIFCJjU3&index=100&ab_channel=Tutorialspoint
+
+____________________________________________________________________________________________________________________________________________________________________________________________
+____________________________________________________________________________________________________________________________________________________________________________________________
+____________________________________________________________________________________________________________________________________________________________________________________________
+____________________________________________________________________________________________________________________________________________________________________________________________
+____________________________________________________________________________________________________________________________________________________________________________________________
+____________________________________________________________________________________________________________________________________________________________________________________________
+
+Notes From the Videos and more
+__________________________________________________
+
+1 | Excel VBA - Introduction
+
+
+__________________________________________________
+
+2 | Excel VBA - User-Interface of VBA Screen
+
+
+__________________________________________________
+
+3 | Excel VBA - Developer Tab
+
+
+__________________________________________________
+
+4 | Excel VBA - Record a Macro
+
+
+__________________________________________________
+
+5 | Excel VBA - Save a Macro Workbook
+
+
+__________________________________________________
+
+6 | Excel VBA - Write a Simple Macro
+
+
+__________________________________________________
+
+7 | Excel VBA - Cell Referencing
+
+
+__________________________________________________
+
+8 | Excel VBA - Copy Paste
+
+
+__________________________________________________
+
+9 | Excel VBA - Font
+
+
+__________________________________________________
+
+10 | Excel VBA - With Block
+
+
+__________________________________________________
+
+11 | Excel VBA - Borders
+
+
+__________________________________________________
+
+12 | Excel VBA - Alignment
+
+
+__________________________________________________
+
+13 | Excel VBA - Font Color
+
+
+__________________________________________________
+
+14 | Excel VBA - Background Color
+
+
+__________________________________________________
+
+15 | Excel VBA - Paste Special
+
+
+__________________________________________________
+
+16 | Excel VBA - Orientation
+
+
+__________________________________________________
+
+17 | Excel VBA - Wrap Text
+
+
+__________________________________________________
+
+18 | Excel VBA - Merge Unmerge
+
+
+__________________________________________________
+
+19 | Excel VBA - Clear Cells
+
+
+__________________________________________________
+
+20 | Excel VBA - Delete Cells
+
+
+__________________________________________________
+
+21 | Excel VBA - Rows & Columns Insert
+
+
+__________________________________________________
+
+22 | Excel VBA - Rows and Columns Delete
+
+
+__________________________________________________
+
+23 | Excel VBA - Column Width
+
+
+__________________________________________________
+
+24 | Excel VBA - Row Height
+
+
+__________________________________________________
+
+25 | Excel VBA - Activate & Select
+
+
+__________________________________________________
+
+26 | Excel VBA - Columns Hide and Unhide
+
+
+__________________________________________________
+
+27 | Excel VBA - Rows Hide and Unhide
+
+
+__________________________________________________
+
+28 | Excel VBA - Sheets Introduction
+
+
+__________________________________________________
+
+29 | Excel VBA - Add Sheets
+
+
+__________________________________________________
+
+30 | Excel VBA - Add Sheet with Names
+
+
+__________________________________________________
+
+31 | Excel VBA - Rename Sheets
+
+
+__________________________________________________
+
+32 | Excel VBA - Get Sheet Names
+
+
+__________________________________________________
+
+33 | Excel VBA - Copy Sheets
+
+
+__________________________________________________
+
+34 | Excel VBA - Move Sheets
+
+
+__________________________________________________
+
+35 | Excel VBA - Change Sheet Tab Color
+
+
+__________________________________________________
+
+36 | Excel VBA - Hide and Unhide Sheets
+
+
+__________________________________________________
+
+37 | Excel VBA - Sheet Protection
+
+
+__________________________________________________
+
+38 | Excel VBA - Activate Sheet
+
+
+__________________________________________________
+
+39 | Excel VBA - Create Workbook
+
+
+__________________________________________________
+
+40 | Excel VBA - Get Workbook Name
+
+
+__________________________________________________
+
+41 | Excel VBA - Save & Close Workbook
+
+
+__________________________________________________
+
+42 | Excel VBA - Open and Close Workbook
+
+
+__________________________________________________
+
+43 | Excel VBA - Delete Workbook
+
+
+__________________________________________________
+
+44 | Excel VBA - Create Folder
+
+
+__________________________________________________
+
+45 | Excel VBA - Variable Usage
+
+
+__________________________________________________
+
+46 | Excel VBA - Comment
+
+
+__________________________________________________
+
+47 | Excel VBA - For Loop Example 1
+
+
+__________________________________________________
+
+48 | Excel VBA - For Loop Example 2
+
+
+__________________________________________________
+
+49 | Excel VBA - For Loop Example 3
+
+
+__________________________________________________
+
+50 | Excel VBA - For Loop Example 4
+
+
+__________________________________________________
+
+51 | Excel VBA - For Loop Example 5
+
+
+__________________________________________________
+
+52 | Excel VBA - For Loop Sheet Name
+
+
+__________________________________________________
+
+53 | Excel VBA - For Each Next Loop
+
+
+__________________________________________________
+
+54 | Excel VBA - Do While
+
+
+__________________________________________________
+
+55 | Excel VBA - Do Until
+
+
+__________________________________________________
+
+56 | Excel VBA - Types of Errors
+
+
+__________________________________________________
+
+57 | Excel VBA - Error Handling
+
+
+__________________________________________________
+
+58 | Excel VBA - Debugging
+
+
+__________________________________________________
+
+59 | Excel VBA - Immediate Window
+
+
+__________________________________________________
+
+60 | Excel VBA - Number to Text Function
+
+
+__________________________________________________
+
+61 | Excel VBA - If Statements
+
+
+__________________________________________________
+
+62 | Excel VBA - If Else Statements
+
+
+__________________________________________________
+
+63 | Excel VBA - If Elseif Else Statement
+
+
+__________________________________________________
+
+64 | Excel VBA - If Elseif Else with AND Operator
+
+
+__________________________________________________
+
+65 | Excel VBA - If Else Using For Loop
+
+
+__________________________________________________
+
+66 | Excel VBA - Select Case Statement
+
+
+__________________________________________________
+
+67 | Excel VBA - Message Box 1
+
+
+__________________________________________________
+
+68 | Excel VBA - Message Box 2
+
+
+__________________________________________________
+
+69 | Excel VBA - Message Box 3
+
+
+__________________________________________________
+
+70 | Excel VBA - Message Box 4
+
+
+__________________________________________________
+
+71 | Excel VBA - Message Box 5
+
+
+__________________________________________________
+
+72 | Excel VBA - Input Box
+
+
+__________________________________________________
+
+73 | Excel VBA - Rows & Columns Count
+
+
+__________________________________________________
+
+74 | Excel VBA - String Functions Left-Right
+
+
+__________________________________________________
+
+75 | Excel VBA - String Functions Ucase-Lcase
+
+
+__________________________________________________
+
+76 | Excel VBA - String Reverse
+
+
+__________________________________________________
+
+77 | Excel VBA - Create Functions
+
+
+__________________________________________________
+
+78 | Excel VBA - Date Add
+
+
+__________________________________________________
+
+79 | Excel VBA - Date Part
+
+
+__________________________________________________
+
+80 | Excel VBA - DD.MM.YYYY
+
+
+__________________________________________________
+
+81 | Excel VBA - Dates
+
+
+__________________________________________________
+
+82 | Excel VBA - Time Function Part 1
+
+
+__________________________________________________
+
+83 | Excel VBA - Time Function Part 2
+
+
+__________________________________________________
+
+84 | Excel VBA - 1D Array Static
+
+
+__________________________________________________
+
+85 | Excel VBA - 2D Array Static
+
+
+__________________________________________________
+
+86 | Excel VBA - Dynamic Array
+
+
+__________________________________________________
+
+87 | Excel VBA - Worksheet Selection Change
+
+
+__________________________________________________
+
+88 | Excel VBA - Double Click
+
+
+__________________________________________________
+
+89 | Excel VBA - Sheet Activate
+
+
+__________________________________________________
+
+90 | Excel VBA - Workbook Open
+
+
+__________________________________________________
+
+91 | Excel VBA - Create User Form
+
+
+__________________________________________________
+
+92 | Excel VBA - Command Button
+
+
+__________________________________________________
+
+93 | Excel VBA - Radio Button
+
+
+__________________________________________________
+
+94 | Excel VBA - Check Box
+
+
+__________________________________________________
+
+95 | Excel VBA - List Box
+
+
+__________________________________________________
+
+96 | Excel VBA - Frames
+
+
+__________________________________________________
+
+97 | Excel VBA - Multipage
+
+
+__________________________________________________
+
+98 | Excel VBA - Background
+
+
+__________________________________________________
+
+99 | Excel VBA - Text Box
+
+
+__________________________________________________
+
+100 | Excel VBA - User Form Event
+
+
+__________________________________________________
