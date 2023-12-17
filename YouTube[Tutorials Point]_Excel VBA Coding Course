@@ -250,7 +250,21 @@ __________________________________________________
 
 11 | Excel VBA - Borders
 
+Sub Borders()
 
+  Range("A1:A10").borders.LineStyle = xlDot
+  'There are 8 Standard vb Colors
+  Range("A1:A10").borders.Color = vbGreen
+  'Weight is only until 4 Maximum
+  Range("A1:A10").borders.Weight = 3
+
+  Range("A1:A10").borders.LineStyle = xlDot
+  Range("A1:A10").borders.LineStyle = xlDash
+  Range("A1:A10").borders.LineStyle = xlContinuous
+  Range("A1:A10").borders.LineStyle = xlDouble
+  Range("A1:A10").borders.LineStyle = xlNone
+
+End Sub
 __________________________________________________
 
 12 | Excel VBA - Alignment
