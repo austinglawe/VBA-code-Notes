@@ -12,7 +12,7 @@ Watched [ ] | Playlist # | Video Name | Length | Playlist Video Link
 [x] | 9 | Excel VBA - Font | 5 Min 49 Sec | https://www.youtube.com/watch?v=Z5knhyubmEk&list=PLWPirh4EWFpEFSYTbKaST6hSlgIFCJjU3&index=9&ab_channel=Tutorialspoint
 [x] | 10 | Excel VBA - With Block | 3 Min 39 Sec | https://www.youtube.com/watch?v=3fI_pWcH_CY&list=PLWPirh4EWFpEFSYTbKaST6hSlgIFCJjU3&index=10&ab_channel=Tutorialspoint
 [x] | 11 | Excel VBA - Borders | 4 Min 33 Sec | https://www.youtube.com/watch?v=5pp1r1sQKtg&list=PLWPirh4EWFpEFSYTbKaST6hSlgIFCJjU3&index=11&ab_channel=Tutorialspoint
-[] | 12 | Excel VBA - Alignment | 4 Min 3 Sec | https://www.youtube.com/watch?v=DJ7lyMkSn4Q&list=PLWPirh4EWFpEFSYTbKaST6hSlgIFCJjU3&index=12&ab_channel=Tutorialspoint
+[x] | 12 | Excel VBA - Alignment | 4 Min 3 Sec | https://www.youtube.com/watch?v=DJ7lyMkSn4Q&list=PLWPirh4EWFpEFSYTbKaST6hSlgIFCJjU3&index=12&ab_channel=Tutorialspoint
 [] | 13 | Excel VBA - Font Color | 4 Min 55 Sec | https://www.youtube.com/watch?v=S9nH8CFD4RA&list=PLWPirh4EWFpEFSYTbKaST6hSlgIFCJjU3&index=13&ab_channel=Tutorialspoint
 [] | 14 | Excel VBA - Background Color | 4 Min 2 Sec | https://www.youtube.com/watch?v=tsAIPNMbs70&list=PLWPirh4EWFpEFSYTbKaST6hSlgIFCJjU3&index=14&ab_channel=Tutorialspoint
 [] | 15 | Excel VBA - Paste Special | 6 Min 6 Sec | https://www.youtube.com/watch?v=dxZOyl33700&list=PLWPirh4EWFpEFSYTbKaST6hSlgIFCJjU3&index=15&ab_channel=Tutorialspoint
@@ -270,12 +270,43 @@ __________________________________________________
 
 12 | Excel VBA - Alignment
 
+Sub alignment()
+  
+  Range("A1:C5").HorizontalAlignment = xlLeft
+  
+  'Horizontal Alignment
+  Range("A1:C5").HorizontalAlignment = xlLeft
+  Range("A1:C5").HorizontalAlignment = xlRight
+  Range("A1:C5").HorizontalAlignment = xlCenter
 
+  'Vertical Alignment
+  Range("A1:C5").VerticalAlignment = xlTop
+  Range("A1:C5").VerticalAlignment = xlBottom
+  Range("A1:C5").VerticalAlignment = xlCenter
+
+End Sub
 __________________________________________________
 
 13 | Excel VBA - Font Color
 
+Sub Font_Color()
 
+  '8 Main (vb) Colors
+  Range("A1:A10").font.Color = vbGreen
+  Range("A1:A10").font.Color = vbWhite
+  Range("A1:A10").font.Color = vbBlack
+  Range("A1:A10").font.Color = vbyello
+  Range("A1:A10").font.Color = vbRed
+  Range("A1:A10").font.Color = vbBlue
+  Range("A1:A10").font.Color = vbCyan
+  Range("A1:A10").font.Color = vbmagneta
+
+  'Color Index has different colors for 1-56. Only goes to 56.
+  Range("A1:A10").font.ColorIndex = 1
+  Range("A1:A10").font.ColorIndex = 10
+  Range("A1:A10").font.ColorIndex = 50
+
+End Sub
 __________________________________________________
 
 14 | Excel VBA - Background Color
