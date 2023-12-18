@@ -34,11 +34,11 @@ Watched [ ] | Playlist # | Video Name | Length | Playlist Video Link
 [x] | 31 | Excel VBA - Rename Sheets | 2 Min 21 Sec | https://www.youtube.com/watch?v=IB8nqjsRFO4&list=PLWPirh4EWFpEFSYTbKaST6hSlgIFCJjU3&index=31&ab_channel=Tutorialspoint
 [x] | 32 | Excel VBA - Get Sheet Names | 2 Min 2 Sec | https://www.youtube.com/watch?v=3Qk_QDedzHU&list=PLWPirh4EWFpEFSYTbKaST6hSlgIFCJjU3&index=32&ab_channel=Tutorialspoint
 [x] | 33 | Excel VBA - Copy Sheets | 2 Min 23 Sec | https://www.youtube.com/watch?v=-MA2EeAzrc4&list=PLWPirh4EWFpEFSYTbKaST6hSlgIFCJjU3&index=33&ab_channel=Tutorialspoint
-[] | 34 | Excel VBA - Move Sheets | 2 Min 29 Sec | https://www.youtube.com/watch?v=n_QqU29c07c&list=PLWPirh4EWFpEFSYTbKaST6hSlgIFCJjU3&index=34&ab_channel=Tutorialspoint
-[] | 35 | Excel VBA - Change Sheet Tab Color | 3 Min 19 Sec | https://www.youtube.com/watch?v=-MdCfJOg8Vs&list=PLWPirh4EWFpEFSYTbKaST6hSlgIFCJjU3&index=35&ab_channel=Tutorialspoint
-[] | 36 | Excel VBA - Hide and Unhide Sheets | 2 Min 17 Sec | https://www.youtube.com/watch?v=TbLXzpJ1DL0&list=PLWPirh4EWFpEFSYTbKaST6hSlgIFCJjU3&index=36&ab_channel=Tutorialspoint
-[] | 37 | Excel VBA - Sheet Protection | 3 Min 4 Sec | https://www.youtube.com/watch?v=p65s2djDhH4&list=PLWPirh4EWFpEFSYTbKaST6hSlgIFCJjU3&index=37&ab_channel=Tutorialspoint
-[] | 38 | Excel VBA - Activate Sheet | 1 Min 55 Sec | https://www.youtube.com/watch?v=YqC2dp8zuk0&list=PLWPirh4EWFpEFSYTbKaST6hSlgIFCJjU3&index=38&ab_channel=Tutorialspoint
+[x] | 34 | Excel VBA - Move Sheets | 2 Min 29 Sec | https://www.youtube.com/watch?v=n_QqU29c07c&list=PLWPirh4EWFpEFSYTbKaST6hSlgIFCJjU3&index=34&ab_channel=Tutorialspoint
+[x] | 35 | Excel VBA - Change Sheet Tab Color | 3 Min 19 Sec | https://www.youtube.com/watch?v=-MdCfJOg8Vs&list=PLWPirh4EWFpEFSYTbKaST6hSlgIFCJjU3&index=35&ab_channel=Tutorialspoint
+[x] | 36 | Excel VBA - Hide and Unhide Sheets | 2 Min 17 Sec | https://www.youtube.com/watch?v=TbLXzpJ1DL0&list=PLWPirh4EWFpEFSYTbKaST6hSlgIFCJjU3&index=36&ab_channel=Tutorialspoint
+[x] | 37 | Excel VBA - Sheet Protection | 3 Min 4 Sec | https://www.youtube.com/watch?v=p65s2djDhH4&list=PLWPirh4EWFpEFSYTbKaST6hSlgIFCJjU3&index=37&ab_channel=Tutorialspoint
+[x] | 38 | Excel VBA - Activate Sheet | 1 Min 55 Sec | https://www.youtube.com/watch?v=YqC2dp8zuk0&list=PLWPirh4EWFpEFSYTbKaST6hSlgIFCJjU3&index=38&ab_channel=Tutorialspoint
 [] | 39 | Excel VBA - Create Workbook | 4 Min 3 Sec | https://www.youtube.com/watch?v=2ae3lj5UiJc&list=PLWPirh4EWFpEFSYTbKaST6hSlgIFCJjU3&index=39&ab_channel=Tutorialspoint
 [] | 40 | Excel VBA - Get Workbook Name | 3 Min 55 Sec | https://www.youtube.com/watch?v=SziqFXFWOpg&list=PLWPirh4EWFpEFSYTbKaST6hSlgIFCJjU3&index=40&ab_channel=Tutorialspoint
 [] | 41 | Excel VBA - Save & Close Workbook | 3 Min 5 Sec | https://www.youtube.com/watch?v=rrGesm7w3G8&list=PLWPirh4EWFpEFSYTbKaST6hSlgIFCJjU3&index=41&ab_channel=Tutorialspoint
@@ -593,27 +593,68 @@ __________________________________________________
 
 34 | Excel VBA - Move Sheets
 
+Sub Move_Sheets()
 
+  'Only options are moving before or after
+  Sheets("Properties").Move after:=Sheets("Details")
+  Sheets("Hello").Move before:=Sheets("Details")
+
+End Sub
 __________________________________________________
 
 35 | Excel VBA - Change Sheet Tab Color
 
+Sub Change_Sheet_Tab_Color()
 
+  Sheets("Details").Tab.Color = vbBlack
+  Sheets("Details").Tab.Color = vbRed
+  Sheets("Details").Tab.Color = vbBlue
+  Sheets("Details").Tab.Color = vbCyan
+  Sheets("Details").Tab.Color = vbMagneta
+
+  Sheets("Details").Tab.ColorIndex = 1
+  Sheets("Details").Tab.ColorIndex = 10
+  Sheets("Details").Tab.ColorIndex = 20
+
+  Sheets("Details").Tab.Color = False
+
+End Sub
 __________________________________________________
 
 36 | Excel VBA - Hide and Unhide Sheets
 
+Sub Hide_Unhide_Sheets()
 
+  Sheets("Details").Visible = False
+  Sheets("Details").Visible = True
+
+  Sheets("Properties").Visible = False
+  Sheets("Properties").Visible = True
+
+End Sub
 __________________________________________________
 
 37 | Excel VBA - Sheet Protection
 
+Sub Sheet_Protection()
 
+  Sheets("Details").Protect Password:=123
+  Sheets("Details").Unprotect Password:=123
+
+End Sub
 __________________________________________________
 
 38 | Excel VBA - Activate Sheet
 
+Sub Activate_Sheets()
 
+  Sheets("Properties").Activate
+
+  Sheets("Details").Select
+
+  Sheets("Properties").Activate
+
+End Sub
 __________________________________________________
 
 39 | Excel VBA - Create Workbook
