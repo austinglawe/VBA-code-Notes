@@ -31,9 +31,9 @@ Watched [ ] | Playlist # | Video Name | Length | Playlist Video Link
 [x] | 28 | Excel VBA - Sheets Introduction | 6 Min 35 Sec | https://www.youtube.com/watch?v=ApmXWGJhu54&list=PLWPirh4EWFpEFSYTbKaST6hSlgIFCJjU3&index=28&ab_channel=Tutorialspoint
 [x] | 29 | Excel VBA - Add Sheets | 3 Min 6 Sec | https://www.youtube.com/watch?v=bx3oMfGJQOY&list=PLWPirh4EWFpEFSYTbKaST6hSlgIFCJjU3&index=29&ab_channel=Tutorialspoint
 [x] | 30 | Excel VBA - Add Sheet with Names | 2 Min 0 Sec | https://www.youtube.com/watch?v=902HXbcJ7F4&list=PLWPirh4EWFpEFSYTbKaST6hSlgIFCJjU3&index=30&ab_channel=Tutorialspoint
-[] | 31 | Excel VBA - Rename Sheets | 2 Min 21 Sec | https://www.youtube.com/watch?v=IB8nqjsRFO4&list=PLWPirh4EWFpEFSYTbKaST6hSlgIFCJjU3&index=31&ab_channel=Tutorialspoint
-[] | 32 | Excel VBA - Get Sheet Names | 2 Min 2 Sec | https://www.youtube.com/watch?v=3Qk_QDedzHU&list=PLWPirh4EWFpEFSYTbKaST6hSlgIFCJjU3&index=32&ab_channel=Tutorialspoint
-[] | 33 | Excel VBA - Copy Sheets | 2 Min 23 Sec | https://www.youtube.com/watch?v=-MA2EeAzrc4&list=PLWPirh4EWFpEFSYTbKaST6hSlgIFCJjU3&index=33&ab_channel=Tutorialspoint
+[x] | 31 | Excel VBA - Rename Sheets | 2 Min 21 Sec | https://www.youtube.com/watch?v=IB8nqjsRFO4&list=PLWPirh4EWFpEFSYTbKaST6hSlgIFCJjU3&index=31&ab_channel=Tutorialspoint
+[x] | 32 | Excel VBA - Get Sheet Names | 2 Min 2 Sec | https://www.youtube.com/watch?v=3Qk_QDedzHU&list=PLWPirh4EWFpEFSYTbKaST6hSlgIFCJjU3&index=32&ab_channel=Tutorialspoint
+[x] | 33 | Excel VBA - Copy Sheets | 2 Min 23 Sec | https://www.youtube.com/watch?v=-MA2EeAzrc4&list=PLWPirh4EWFpEFSYTbKaST6hSlgIFCJjU3&index=33&ab_channel=Tutorialspoint
 [] | 34 | Excel VBA - Move Sheets | 2 Min 29 Sec | https://www.youtube.com/watch?v=n_QqU29c07c&list=PLWPirh4EWFpEFSYTbKaST6hSlgIFCJjU3&index=34&ab_channel=Tutorialspoint
 [] | 35 | Excel VBA - Change Sheet Tab Color | 3 Min 19 Sec | https://www.youtube.com/watch?v=-MdCfJOg8Vs&list=PLWPirh4EWFpEFSYTbKaST6hSlgIFCJjU3&index=35&ab_channel=Tutorialspoint
 [] | 36 | Excel VBA - Hide and Unhide Sheets | 2 Min 17 Sec | https://www.youtube.com/watch?v=TbLXzpJ1DL0&list=PLWPirh4EWFpEFSYTbKaST6hSlgIFCJjU3&index=36&ab_channel=Tutorialspoint
@@ -556,17 +556,39 @@ __________________________________________________
 
 31 | Excel VBA - Rename Sheets
 
+Sub Rename_Sheets()
 
+  ' Sheet Position Number (First Sheet)
+  Sheets(1).Name = "Hello"
+
+  Sheets("Sheet5").Name = "World"
+
+End Sub
 __________________________________________________
 
 32 | Excel VBA - Get Sheet Names
 
+Sub Get_Sheet_Names()
 
+  MsgBox (Sheets(1).Name)
+  MsgBox (Sheets(2).Name)
+  MsgBox (Sheets(3).Name)
+  MsgBox (Sheets(4).Name)
+  MsgBox (Sheets(5).Name)
+  MsgBox (Sheets(6).Name)
+  MsgBox (Sheets(7).Name)
+
+End Sub
 __________________________________________________
 
 33 | Excel VBA - Copy Sheets
 
+Sub Copy_Paste_Sheet()
 
+  Sheets("Hello").Copy after: =Sheets("Properties")
+  Sheets("Hello").Copy after: =Sheets("Details")
+
+End Sub
 __________________________________________________
 
 34 | Excel VBA - Move Sheets
