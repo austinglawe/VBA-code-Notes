@@ -29,8 +29,8 @@ Watched [ ] | Playlist # | Video Name | Length | Playlist Video Link
 [x] | 26 | Excel VBA - Columns Hide and Unhide | 2 Min 30 Sec | https://www.youtube.com/watch?v=nd9NXMd5sbQ&list=PLWPirh4EWFpEFSYTbKaST6hSlgIFCJjU3&index=26&ab_channel=Tutorialspoint
 [x] | 27 | Excel VBA - Rows Hide and Unhide | 3 Min 4 Sec | https://www.youtube.com/watch?v=y8-BSKYV-zA&list=PLWPirh4EWFpEFSYTbKaST6hSlgIFCJjU3&index=27&ab_channel=Tutorialspoint
 [x] | 28 | Excel VBA - Sheets Introduction | 6 Min 35 Sec | https://www.youtube.com/watch?v=ApmXWGJhu54&list=PLWPirh4EWFpEFSYTbKaST6hSlgIFCJjU3&index=28&ab_channel=Tutorialspoint
-[] | 29 | Excel VBA - Add Sheets | 3 Min 6 Sec | https://www.youtube.com/watch?v=bx3oMfGJQOY&list=PLWPirh4EWFpEFSYTbKaST6hSlgIFCJjU3&index=29&ab_channel=Tutorialspoint
-[] | 30 | Excel VBA - Add Sheet with Names | 2 Min 0 Sec | https://www.youtube.com/watch?v=902HXbcJ7F4&list=PLWPirh4EWFpEFSYTbKaST6hSlgIFCJjU3&index=30&ab_channel=Tutorialspoint
+[x] | 29 | Excel VBA - Add Sheets | 3 Min 6 Sec | https://www.youtube.com/watch?v=bx3oMfGJQOY&list=PLWPirh4EWFpEFSYTbKaST6hSlgIFCJjU3&index=29&ab_channel=Tutorialspoint
+[x] | 30 | Excel VBA - Add Sheet with Names | 2 Min 0 Sec | https://www.youtube.com/watch?v=902HXbcJ7F4&list=PLWPirh4EWFpEFSYTbKaST6hSlgIFCJjU3&index=30&ab_channel=Tutorialspoint
 [] | 31 | Excel VBA - Rename Sheets | 2 Min 21 Sec | https://www.youtube.com/watch?v=IB8nqjsRFO4&list=PLWPirh4EWFpEFSYTbKaST6hSlgIFCJjU3&index=31&ab_channel=Tutorialspoint
 [] | 32 | Excel VBA - Get Sheet Names | 2 Min 2 Sec | https://www.youtube.com/watch?v=3Qk_QDedzHU&list=PLWPirh4EWFpEFSYTbKaST6hSlgIFCJjU3&index=32&ab_channel=Tutorialspoint
 [] | 33 | Excel VBA - Copy Sheets | 2 Min 23 Sec | https://www.youtube.com/watch?v=-MA2EeAzrc4&list=PLWPirh4EWFpEFSYTbKaST6hSlgIFCJjU3&index=33&ab_channel=Tutorialspoint
@@ -532,12 +532,26 @@ __________________________________________________
 
 29 | Excel VBA - Add Sheets
 
+Sub Add_Sheets()
 
+  Sheets.Add
+  Worksheets.Add
+
+  Sheets.Add after:=Sheets("TutorialsPoint")
+  Sheets.Add before:=Sheets("TutorialsPoint")
+
+End Sub
 __________________________________________________
 
 30 | Excel VBA - Add Sheet with Names
 
+Sub Add_Sheets_With_Names()
 
+  Sheets.Add
+
+  Sheets.Add.Name = "Properties"
+
+End Sub
 __________________________________________________
 
 31 | Excel VBA - Rename Sheets
