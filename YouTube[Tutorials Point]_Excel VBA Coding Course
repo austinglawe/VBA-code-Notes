@@ -49,8 +49,8 @@ Watched [ ] | Playlist # | Video Name | Length | Playlist Video Link
 [x] | 46 | Excel VBA - Comment | 3 Min 33 Sec | https://www.youtube.com/watch?v=p4hwD8S0av4&list=PLWPirh4EWFpEFSYTbKaST6hSlgIFCJjU3&index=46&ab_channel=Tutorialspoint
 [x] | 47 | Excel VBA - For Loop Example 1 | 6 Min 44 Sec | https://www.youtube.com/watch?v=kKonIb8SDoM&list=PLWPirh4EWFpEFSYTbKaST6hSlgIFCJjU3&index=47&ab_channel=Tutorialspoint
 [x] | 48 | Excel VBA - For Loop Example 2 | 5 Min 30 Sec | https://www.youtube.com/watch?v=lOS_3u0VIxc&list=PLWPirh4EWFpEFSYTbKaST6hSlgIFCJjU3&index=48&ab_channel=Tutorialspoint
-[] | 49 | Excel VBA - For Loop Example 3 | 3 Min 35 Sec | https://www.youtube.com/watch?v=ez8qKt0Ydl8&list=PLWPirh4EWFpEFSYTbKaST6hSlgIFCJjU3&index=49&ab_channel=Tutorialspoint
-[] | 50 | Excel VBA - For Loop Example 4 | 2 Min 52 Sec | https://www.youtube.com/watch?v=gwKz0uP5bNw&list=PLWPirh4EWFpEFSYTbKaST6hSlgIFCJjU3&index=50&ab_channel=Tutorialspoint
+[x] | 49 | Excel VBA - For Loop Example 3 | 3 Min 35 Sec | https://www.youtube.com/watch?v=ez8qKt0Ydl8&list=PLWPirh4EWFpEFSYTbKaST6hSlgIFCJjU3&index=49&ab_channel=Tutorialspoint
+[x] | 50 | Excel VBA - For Loop Example 4 | 2 Min 52 Sec | https://www.youtube.com/watch?v=gwKz0uP5bNw&list=PLWPirh4EWFpEFSYTbKaST6hSlgIFCJjU3&index=50&ab_channel=Tutorialspoint
 [] | 51 | Excel VBA - For Loop Example 5 | 2 Min 3 Sec | https://www.youtube.com/watch?v=k7m__fpGxPw&list=PLWPirh4EWFpEFSYTbKaST6hSlgIFCJjU3&index=51&ab_channel=Tutorialspoint
 [] | 52 | Excel VBA - For Loop Sheet Name | 2 Min 18 Sec | https://www.youtube.com/watch?v=HnpGPd2ZcY0&list=PLWPirh4EWFpEFSYTbKaST6hSlgIFCJjU3&index=52&ab_channel=Tutorialspoint
 [] | 53 | Excel VBA - For Each Next Loop | 2 Min 15 Sec | https://www.youtube.com/watch?v=vFhTFMM5BM4&list=PLWPirh4EWFpEFSYTbKaST6hSlgIFCJjU3&index=53&ab_channel=Tutorialspoint
@@ -811,7 +811,14 @@ Sub For_Loop2()
   Dim y As Integer
 
   For y = 1 to 10
-    Cells(y, 1).Value = 10
+    Cells(y, 1).Value = y
+  Next
+
+
+  Dim s As Integer
+
+  For s = 1 To 10 Step 3
+    Cells(s, 2).Value = s
   Next
 
 End Sub
@@ -819,17 +826,41 @@ __________________________________________________
 
 49 | Excel VBA - For Loop Example 3
 
+Sub For_Loop3()
+  Dim x As Integer
 
+  For x = 1 To 56
+    Cells(x, 1).Value = x
+    Cells(x, 2).Interior.ColorIndex = x
+
+End Sub
 __________________________________________________
 
 50 | Excel VBA - For Loop Example 4
 
+' Reverse the way the For loop executes
 
+Sub For_Loop4()
+  Dim x As Integer
+
+  For x = 20 To 1 Step -1
+    Cells(x, 1).Value = x
+  Next x
+
+End Sub
 __________________________________________________
 
 51 | Excel VBA - For Loop Example 5
+' Diagonal Ordering
 
+Sub For_Loop5()
+  Dim x As Integer
 
+  For x = 1 To 10
+    Cells(x, x).Value = x
+  Next x
+
+End Sub
 __________________________________________________
 
 52 | Excel VBA - For Loop Sheet Name
