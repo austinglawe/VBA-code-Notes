@@ -52,9 +52,9 @@ Watched [ ] | Playlist # | Video Name | Length | Playlist Video Link
 [x] | 49 | Excel VBA - For Loop Example 3 | 3 Min 35 Sec | https://www.youtube.com/watch?v=ez8qKt0Ydl8&list=PLWPirh4EWFpEFSYTbKaST6hSlgIFCJjU3&index=49&ab_channel=Tutorialspoint
 [x] | 50 | Excel VBA - For Loop Example 4 | 2 Min 52 Sec | https://www.youtube.com/watch?v=gwKz0uP5bNw&list=PLWPirh4EWFpEFSYTbKaST6hSlgIFCJjU3&index=50&ab_channel=Tutorialspoint
 [x] | 51 | Excel VBA - For Loop Example 5 | 2 Min 3 Sec | https://www.youtube.com/watch?v=k7m__fpGxPw&list=PLWPirh4EWFpEFSYTbKaST6hSlgIFCJjU3&index=51&ab_channel=Tutorialspoint
-[] | 52 | Excel VBA - For Loop Sheet Name | 2 Min 18 Sec | https://www.youtube.com/watch?v=HnpGPd2ZcY0&list=PLWPirh4EWFpEFSYTbKaST6hSlgIFCJjU3&index=52&ab_channel=Tutorialspoint
-[] | 53 | Excel VBA - For Each Next Loop | 2 Min 15 Sec | https://www.youtube.com/watch?v=vFhTFMM5BM4&list=PLWPirh4EWFpEFSYTbKaST6hSlgIFCJjU3&index=53&ab_channel=Tutorialspoint
-[] | 54 | Excel VBA - Do While | 4 Min 52 Sec | https://www.youtube.com/watch?v=n3-oMBywAxo&list=PLWPirh4EWFpEFSYTbKaST6hSlgIFCJjU3&index=54&ab_channel=Tutorialspoint
+[x] | 52 | Excel VBA - For Loop Sheet Name | 2 Min 18 Sec | https://www.youtube.com/watch?v=HnpGPd2ZcY0&list=PLWPirh4EWFpEFSYTbKaST6hSlgIFCJjU3&index=52&ab_channel=Tutorialspoint
+[x] | 53 | Excel VBA - For Each Next Loop | 2 Min 15 Sec | https://www.youtube.com/watch?v=vFhTFMM5BM4&list=PLWPirh4EWFpEFSYTbKaST6hSlgIFCJjU3&index=53&ab_channel=Tutorialspoint
+[x] | 54 | Excel VBA - Do While | 4 Min 52 Sec | https://www.youtube.com/watch?v=n3-oMBywAxo&list=PLWPirh4EWFpEFSYTbKaST6hSlgIFCJjU3&index=54&ab_channel=Tutorialspoint
 [] | 55 | Excel VBA - Do Until | 2 Min 30 Sec | https://www.youtube.com/watch?v=MdZ8gwv4NLI&list=PLWPirh4EWFpEFSYTbKaST6hSlgIFCJjU3&index=55&ab_channel=Tutorialspoint
 [] | 56 | Excel VBA - Types of Errors | 5 Min 15 Sec | https://www.youtube.com/watch?v=ngmyx0rtxiA&list=PLWPirh4EWFpEFSYTbKaST6hSlgIFCJjU3&index=56&ab_channel=Tutorialspoint
 [] | 57 | Excel VBA - Error Handling | 4 Min 58 Sec | https://www.youtube.com/watch?v=gn37Awyxxt4&list=PLWPirh4EWFpEFSYTbKaST6hSlgIFCJjU3&index=57&ab_channel=Tutorialspoint
@@ -865,17 +865,40 @@ __________________________________________________
 
 52 | Excel VBA - For Loop Sheet Name
 
+Sub Sheets_Name()
 
+  For x = 1 To ThisWorkbook.Sheets.Count
+    MsgBox ThisWorkbook.Sheets(x).Name
+  Next
+
+End Sub
 __________________________________________________
 
 53 | Excel VBA - For Each Next Loop
 
+Sub For_Each_Next_1()
+  Dim sht As Worksheet
 
+  'runs on the collection of objects
+  For Each sht In ThisWorkbook.Sheets
+    MsgBox sht.Name
+  Next
+
+End Sub
 __________________________________________________
 
 54 | Excel VBA - Do While
 
+Sub Loop_Do_While()
+  Dim i As Integer
+  i = 1
 
+  Do While Cells(i, 1).Value <> ""
+    Cells(i, 2).Value = Cells(i, 1).Value + 10
+    i = i + 1
+  Loop
+
+End Sub
 __________________________________________________
 
 55 | Excel VBA - Do Until
