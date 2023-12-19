@@ -659,52 +659,162 @@ __________________________________________________
 
 39 | Excel VBA - Create Workbook
 
+Sub Create_Workbook
+  Workbooks.Add
+  Workbooks.Add.SaveAs Filename:="E:\Demobook.xlsx"
 
+End Sub
 __________________________________________________
 
 40 | Excel VBA - Get Workbook Name
 
+Sub Get_Workbook_Name
+  MsgBox (ActiveWorkbook.Name)
+  MsgBox (ThisWorkbook.Name)
 
+  Workbooks("Book1.xlsx").Activate
+
+  MsgBox (ActiveWorkbook.Name)
+  MsgBox(ThisWorkbook.Name)
+
+End Sub
 __________________________________________________
 
 41 | Excel VBA - Save & Close Workbook
 
+Sub Workbook_Save_Close
 
+  Workbooks("Book1.xlsx").Sheets(1).Range("A1:A10") = "Excel"
+
+  Workbooks("Book1.xlsx").Save
+
+  Workbooks("Book1.xlsx").Close
+
+End Sub
 __________________________________________________
 
 42 | Excel VBA - Open and Close Workbook
 
+Sub Workbook_Open_Close()
 
+  Workbooks.Open Filename:="E:\Demobook.xlsx"
+  Workbooks("Demobook.xlsx").Sheets(1).Range("A1:A20") = "Excel"
+  Workbooks("Demobook.xlsx").Save
+  Workbooks("Demobook.xlsx").Close
+
+End Sub
 __________________________________________________
 
 43 | Excel VBA - Delete Workbook
 
+Sub Delete_Workbook()
 
+  Kill ("E:\a.xlsx")
+  Kill ("E:\b.xlsx")
+  Kill ("E:\c.xlsx")
+
+  Kill ("E:\Book1.xlsx")
+  Kill ("E:\Demobook.xlsx")
+
+End Sub
 __________________________________________________
 
 44 | Excel VBA - Create Folder
 
+Sub Create_Folder()
 
+  MkDir ("E:\Folder1")
+  MkDir ("E:\Folder2")
+  MkDir ("E:\Folder3")
+  MkDir ("E:\Folder4")
+
+End Sub
 __________________________________________________
 
 45 | Excel VBA - Variable Usage
 
+Sub Variables_Usage()
 
+  Range("A1").Value = "Tutorials"
+  Range("A4").Value = "Tutorials"
+  Range("A9").Value = "Tutorials"
+  Range("A8").Value = "Tutorials"
+
+  var1 = "Tutorials"
+
+  Range("A1").Value = var1
+  Range("A4").Value = var1
+  Range("A9").Value = var1 & var1
+  Range("A8").Value = var1
+
+End Sub
 __________________________________________________
 
 46 | Excel VBA - Comment
 
+Sub Variables_Usage()
+  Dim var1
 
+  ' Code without variable
+
+  Range("A1").Value = "TutorialsP"
+  Range("A1").Value = "TutorialsP"
+  Range("A1").Value = "TutorialsP"
+  Range("A1").Value = "TutorialsP"
+
+  Rem Code with variables
+
+  Range("C1").Value = var1
+  Range("C5").Value = var1
+  Range("C7").Value = var1
+  Range("C9").Value = var1
+
+End Sub
 __________________________________________________
 
 47 | Excel VBA - For Loop Example 1
 
+Sub For_Loop1()
+  Dim x As Integer
 
+  For x = 1 To 10
+    MsgBox 25
+  Next
+
+  ' Displaying Variable's Value in Message Box
+  Dim y As Integer
+
+  For y = 1 to 10
+    MsgBox y
+  Next
+
+  ' Using a step in the loop. **This one will go 2 steps at a time 
+  Dim a As Integer
+
+  For a = 1 to 10 Step 2
+    MsgBox a
+  Next
+ 
+End Sub
 __________________________________________________
 
 48 | Excel VBA - For Loop Example 2
 
+Sub For_Loop2()
+  Dim x As Integer
 
+  For x = 1 To 10
+    Cells(1, 1).Value =  10
+  Next
+
+
+  Dim y As Integer
+
+  For y = 1 to 10
+    Cells(y, 1).Value = 10
+  Next
+
+End Sub
 __________________________________________________
 
 49 | Excel VBA - For Loop Example 3
