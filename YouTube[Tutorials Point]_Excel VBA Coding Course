@@ -57,8 +57,8 @@ Watched [ ] | Playlist # | Video Name | Length | Playlist Video Link
 [x] | 54 | Excel VBA - Do While | 4 Min 52 Sec | https://www.youtube.com/watch?v=n3-oMBywAxo&list=PLWPirh4EWFpEFSYTbKaST6hSlgIFCJjU3&index=54&ab_channel=Tutorialspoint
 [x] | 55 | Excel VBA - Do Until | 2 Min 30 Sec | https://www.youtube.com/watch?v=MdZ8gwv4NLI&list=PLWPirh4EWFpEFSYTbKaST6hSlgIFCJjU3&index=55&ab_channel=Tutorialspoint
 [x] | 56 | Excel VBA - Types of Errors | 5 Min 15 Sec | https://www.youtube.com/watch?v=ngmyx0rtxiA&list=PLWPirh4EWFpEFSYTbKaST6hSlgIFCJjU3&index=56&ab_channel=Tutorialspoint
-[] | 57 | Excel VBA - Error Handling | 4 Min 58 Sec | https://www.youtube.com/watch?v=gn37Awyxxt4&list=PLWPirh4EWFpEFSYTbKaST6hSlgIFCJjU3&index=57&ab_channel=Tutorialspoint
-[] | 58 | Excel VBA - Debugging | 6 Min 59 Sec | https://www.youtube.com/watch?v=fsgOt9rxq5s&list=PLWPirh4EWFpEFSYTbKaST6hSlgIFCJjU3&index=58&ab_channel=Tutorialspoint
+[x] | 57 | Excel VBA - Error Handling | 4 Min 58 Sec | https://www.youtube.com/watch?v=gn37Awyxxt4&list=PLWPirh4EWFpEFSYTbKaST6hSlgIFCJjU3&index=57&ab_channel=Tutorialspoint
+[x] | 58 | Excel VBA - Debugging | 6 Min 59 Sec | https://www.youtube.com/watch?v=fsgOt9rxq5s&list=PLWPirh4EWFpEFSYTbKaST6hSlgIFCJjU3&index=58&ab_channel=Tutorialspoint
 [] | 59 | Excel VBA - Immediate Window | 3 Min 56 Sec | https://www.youtube.com/watch?v=1BqsQe6RSJ4&list=PLWPirh4EWFpEFSYTbKaST6hSlgIFCJjU3&index=59&ab_channel=Tutorialspoint
 [] | 60 | Excel VBA - Number to Text Function | 5 Min 27 Sec | https://www.youtube.com/watch?v=j1Yv4hf2jBc&list=PLWPirh4EWFpEFSYTbKaST6hSlgIFCJjU3&index=60&ab_channel=Tutorialspoint
 [] | 61 | Excel VBA - If Statements | 2 Min 38 Sec | https://www.youtube.com/watch?v=_r2Psbn4t1Y&list=PLWPirh4EWFpEFSYTbKaST6hSlgIFCJjU3&index=61&ab_channel=Tutorialspoint
@@ -949,12 +949,69 @@ __________________________________________________
 
 57 | Excel VBA - Error Handling
 
+Sub Using_Resume_Next()
 
+  MsgBox 10
+  MsgBox 10 / 0
+  MsgBox 20
+
+End Sub
+
+'When it reaches "MsgBox 10 / 0" an error will pop up.
+    ' It will say "Run-time error '11': Division by zero
+      'This will come up as a bug and ask you if you want to fix it. But nothing can be divided by 0.
+
+
+
+Sub Using_Resume_Next()
+
+  On Error Resume Next
+
+  MsgBox 10
+  MsgBox 10 / 0
+  MsgBox 20
+
+End Sub
+'Do not stop at particular locations. Skip the errors.
+
+
+
+
+'Another method to give a particular messsage to the user on the errors
+Sub Using_Resume_Next()
+
+  ' This is saying Go to and then has a particular label. Here label is "abc"
+  On Error GoTo abc
+
+    MsgBox 10
+    MsgBox 10 / 0
+    MsgBox 20
+  Done:
+    Exit Sub
+abc:
+  MsgBox "Error message is xyz"
+
+End Sub
 __________________________________________________
 
 58 | Excel VBA - Debugging
 
+Sub abc()
+  Dim a, b, i As Integer
+  b = 0
+  a = 0
 
+  For i = 1 to 10
+    a = a + i
+    b = b + i
+  Next
+
+End Sub
+
+' Use Locals Window or Watch Window
+
+' BreakPoints are in here as well. Click on the left coding module area.
+' Stop you execution point on a certain line.
 __________________________________________________
 
 59 | Excel VBA - Immediate Window
