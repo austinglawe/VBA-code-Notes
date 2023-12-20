@@ -59,8 +59,8 @@ Watched [ ] | Playlist # | Video Name | Length | Playlist Video Link
 [x] | 56 | Excel VBA - Types of Errors | 5 Min 15 Sec | https://www.youtube.com/watch?v=ngmyx0rtxiA&list=PLWPirh4EWFpEFSYTbKaST6hSlgIFCJjU3&index=56&ab_channel=Tutorialspoint
 [x] | 57 | Excel VBA - Error Handling | 4 Min 58 Sec | https://www.youtube.com/watch?v=gn37Awyxxt4&list=PLWPirh4EWFpEFSYTbKaST6hSlgIFCJjU3&index=57&ab_channel=Tutorialspoint
 [x] | 58 | Excel VBA - Debugging | 6 Min 59 Sec | https://www.youtube.com/watch?v=fsgOt9rxq5s&list=PLWPirh4EWFpEFSYTbKaST6hSlgIFCJjU3&index=58&ab_channel=Tutorialspoint
-[] | 59 | Excel VBA - Immediate Window | 3 Min 56 Sec | https://www.youtube.com/watch?v=1BqsQe6RSJ4&list=PLWPirh4EWFpEFSYTbKaST6hSlgIFCJjU3&index=59&ab_channel=Tutorialspoint
-[] | 60 | Excel VBA - Number to Text Function | 5 Min 27 Sec | https://www.youtube.com/watch?v=j1Yv4hf2jBc&list=PLWPirh4EWFpEFSYTbKaST6hSlgIFCJjU3&index=60&ab_channel=Tutorialspoint
+[x] | 59 | Excel VBA - Immediate Window | 3 Min 56 Sec | https://www.youtube.com/watch?v=1BqsQe6RSJ4&list=PLWPirh4EWFpEFSYTbKaST6hSlgIFCJjU3&index=59&ab_channel=Tutorialspoint
+[incomplete] | 60 | Excel VBA - Number to Text Function | 5 Min 27 Sec | https://www.youtube.com/watch?v=j1Yv4hf2jBc&list=PLWPirh4EWFpEFSYTbKaST6hSlgIFCJjU3&index=60&ab_channel=Tutorialspoint
 [] | 61 | Excel VBA - If Statements | 2 Min 38 Sec | https://www.youtube.com/watch?v=_r2Psbn4t1Y&list=PLWPirh4EWFpEFSYTbKaST6hSlgIFCJjU3&index=61&ab_channel=Tutorialspoint
 [] | 62 | Excel VBA - If Else Statements | 3 Min 26 Sec | https://www.youtube.com/watch?v=iaAv99bidUs&list=PLWPirh4EWFpEFSYTbKaST6hSlgIFCJjU3&index=62&ab_channel=Tutorialspoint
 [] | 63 | Excel VBA - If Elseif Else Statement | 4 Min 36 Sec | https://www.youtube.com/watch?v=KdmJef74pDc&list=PLWPirh4EWFpEFSYTbKaST6hSlgIFCJjU3&index=63&ab_channel=Tutorialspoint
@@ -1016,27 +1016,188 @@ __________________________________________________
 
 59 | Excel VBA - Immediate Window
 
+' Immediate window, will allow you to ask questions and do immediate actions
+' regarding the workbook or worksheet, currently in.
+Sub Call_Userform()
 
+  UserForm9.Show
+
+End Sub
 __________________________________________________
 
 60 | Excel VBA - Number to Text Function
 
+'Code is incomplete. But pretty much all there.
+'Creating a function for excel in VBA
 
+Option Explicit
+  ' Main Function
+Function TutorialsPoint(By Val MyNumber)
+  Dim Dollars, Cents, Temp
+  Dim DecimalPlace, Count
+  ReDim Place(9) As String
+  Place(2) = " Thousand "
+  Place(3) = " Million "
+  Place(4) = " Billion "
+  Place(5) = " Trillion "
+  ' String representation of amount.
+  My Number = Trim(Str(MyNumber))
+  'Position of decimal place 0 if none.
+  DecimalPoint = InStr(MyNumber, ".")
+
+'''''''' Not positive on code from here
+  'Convert cents and set MyNumber to dollar amounts
+  If DecimalPlace > 0 Then
+    Cents = GetTens(Left(Mid(MyNumber, DecimalPlace) '''''-
+              "00,2))
+    MyNumber = Trim(Left(MyNumber, DecimalPlace - 
+  End If
+  Count = 1
+  Do While MyNumber <> ""
+    Temp = GetHundreds(Right(MyNumber, 3))
+    If Temp <> "" Then Dollars = Temp & Place(Count      Dollars
+    If Len(MyNumber) > 3 Then
+      MyNumber = Left(MyNumber, Len(MyNumber) - 
+    Else
+
+'''''''''''''''UNTIL HERE
+      MyNumber = ""
+    End If
+    Count = Count + 1
+  Loop
+  Select Case Dollars
+    Case ""
+      Dollars = "No Dollars"
+    Case "One"
+      Dollars = "One Dollar"
+    Case Else
+      Dollars = Dollars & " Dollars"
+  End Select
+  Select Case Cents
+    Case ""
+      Cents = " and No Cents"
+    Case "One"
+      Cent = " and One Cent"
+        Case Else
+      Cents = " and "& Cents & "Cents"
+  End Select
+  SpellNumber = Dollars & Cents
+End Function
+
+' Converts a number from 100-999 into text
+Function GetHundreds(ByVal MyNumber)
+  Dim Result As String
+  If Val(MyNumber) = 0 Then Exit Function
+  MyNumber = Right("000" & MyNumber, 3)
+  ' Convert the hundreds place.
+  If Mid(MyNumber, 1, 1) <> "0" Then
+
+'''' NOT SURE WHAT THE CODE READS HERE
+    Result = GetDigit(Mid(MyNumber, 1, 1)) & " Hundred
+''''' UNTIL HERE
+  End If
+  'Converts the thens and ones place.
+  If Mid(MyNumber, 2, 1) <> "0" Then
+    Result = Result & GetTens(Mid(MyNumber, 2))
+  Else
+    Results = Result & GetDigit(Mid(MyNumber, 3)) 
+  End If
+  GetHundreds = Result
+End Function
+
+' Converts a number form 10 to 99 into text.
+Function GetTens(TensText)
+  Dim Result As String
+  Result = ""              ' Null out the themporary value.
+  If Val(Left(TensText, 1)) = 1 Then 'If value between 10-19...
+    Select Case Val(TensText)
+      Case10: Result = "Ten"
+      Case11: Result = "Eleven"
+      Case12: Result = "Twelve"
+      Case13: Result = "Thirteen"
+      Case14: Result = "Fourteen"
+      Case15: Result = "Fifteen"
+      Case16: Result = "Sixteen"
+      Case17: Result = "Seventeen"
+      Case18: Result = "Eighteen"
+      Case19: Result = "Nineteen"
+      Case Else
+    End Select
+  Else                  'If Value between 20-99...
+    Select Case Val(Left(TensText, 1))
+      Case 2: Result = "Twenty "
+      Case 3: Result = "Thirty "
+      Case 4: Result = "Forty "
+      Case 5: Result = "Fifty "
+      Case 6: Result = "Sixty "
+      Case 7: Result = "Seventy "
+      Case 8: Result = "Eighty "
+      Case 9: Result = "Ninety "
+      Case Else
+    End Select
+    Result = Result & GetDigit _
+      (Right(TensText, 1)) 'Retreives ones
+  End If
+  GetTens = Result
+End Function
+
+' Converts a number from 1 to 9 into text.
+Function GetDigit(Digit)
+  Select Case Val(Digit)
+    Case 1: GetDigit = "One"
+    Case 2: GetDigit = "Two"
+    Case 3: GetDigit = "Three"
+    Case 4: GetDigit = "Four"
+    Case 5: GetDigit = "Five"
+    Case 6: GetDigit = "Six"
+    Case 7: GetDigit = "Seven"
+    Case 8: GetDigit = "Eight"
+    Case 9: GetDigit = "Nine"
+    Case Else: GetDigit = ""
+  End Selct
+End Function
 __________________________________________________
 
 61 | Excel VBA - If Statements
 
+Sub IF_Test1()
 
+  If Range("A2").Value >= 35 Then Range("C2").Value = "Pass"
+
+End Sub
+
+' If the if is incorrect it will go to the next part and pass by the then.
+' So if will not perform any task without the else part. (Next Lesson)
 __________________________________________________
 
 62 | Excel VBA - If Else Statements
 
+Sub IF_Test2()
 
+  If Range("A2").Value >= 35 
+    Then Range("C2").Value = "Pass"
+  Else
+    Range("C2").Value = "Fail"
+  End If
+
+End Sub
 __________________________________________________
 
 63 | Excel VBA - If Elseif Else Statement
 
+Sub IF_Test3()
 
+  If Range("A2").Value <= 35 then
+    Range("C2").Value = "Fail"
+  Elseif Range("A2").Value <= 60 then
+    Range("C2").Value = "C Grade"
+  Elseif Range("A2").Value <= 80 then
+    Range("C2").Value = "B Grade"
+  Else
+    Range("C2").Value = "A Grade"
+  End If
+
+End Sub
 __________________________________________________
 
 64 | Excel VBA - If Elseif Else with AND Operator
