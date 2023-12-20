@@ -55,8 +55,8 @@ Watched [ ] | Playlist # | Video Name | Length | Playlist Video Link
 [x] | 52 | Excel VBA - For Loop Sheet Name | 2 Min 18 Sec | https://www.youtube.com/watch?v=HnpGPd2ZcY0&list=PLWPirh4EWFpEFSYTbKaST6hSlgIFCJjU3&index=52&ab_channel=Tutorialspoint
 [x] | 53 | Excel VBA - For Each Next Loop | 2 Min 15 Sec | https://www.youtube.com/watch?v=vFhTFMM5BM4&list=PLWPirh4EWFpEFSYTbKaST6hSlgIFCJjU3&index=53&ab_channel=Tutorialspoint
 [x] | 54 | Excel VBA - Do While | 4 Min 52 Sec | https://www.youtube.com/watch?v=n3-oMBywAxo&list=PLWPirh4EWFpEFSYTbKaST6hSlgIFCJjU3&index=54&ab_channel=Tutorialspoint
-[] | 55 | Excel VBA - Do Until | 2 Min 30 Sec | https://www.youtube.com/watch?v=MdZ8gwv4NLI&list=PLWPirh4EWFpEFSYTbKaST6hSlgIFCJjU3&index=55&ab_channel=Tutorialspoint
-[] | 56 | Excel VBA - Types of Errors | 5 Min 15 Sec | https://www.youtube.com/watch?v=ngmyx0rtxiA&list=PLWPirh4EWFpEFSYTbKaST6hSlgIFCJjU3&index=56&ab_channel=Tutorialspoint
+[x] | 55 | Excel VBA - Do Until | 2 Min 30 Sec | https://www.youtube.com/watch?v=MdZ8gwv4NLI&list=PLWPirh4EWFpEFSYTbKaST6hSlgIFCJjU3&index=55&ab_channel=Tutorialspoint
+[x] | 56 | Excel VBA - Types of Errors | 5 Min 15 Sec | https://www.youtube.com/watch?v=ngmyx0rtxiA&list=PLWPirh4EWFpEFSYTbKaST6hSlgIFCJjU3&index=56&ab_channel=Tutorialspoint
 [] | 57 | Excel VBA - Error Handling | 4 Min 58 Sec | https://www.youtube.com/watch?v=gn37Awyxxt4&list=PLWPirh4EWFpEFSYTbKaST6hSlgIFCJjU3&index=57&ab_channel=Tutorialspoint
 [] | 58 | Excel VBA - Debugging | 6 Min 59 Sec | https://www.youtube.com/watch?v=fsgOt9rxq5s&list=PLWPirh4EWFpEFSYTbKaST6hSlgIFCJjU3&index=58&ab_channel=Tutorialspoint
 [] | 59 | Excel VBA - Immediate Window | 3 Min 56 Sec | https://www.youtube.com/watch?v=1BqsQe6RSJ4&list=PLWPirh4EWFpEFSYTbKaST6hSlgIFCJjU3&index=59&ab_channel=Tutorialspoint
@@ -903,12 +903,48 @@ __________________________________________________
 
 55 | Excel VBA - Do Until
 
+Sub Loop_Do_Until()
+  Dim i As Integer
+  i = 1
 
+  ' Do until is saying "Keep doing this task until this is not false
+  ' Once it is not false (or the better way to say it, Once it is true). Stop executing loop
+  Do Until i > 4
+    Cells(i, 1).Value = 20
+    i = i + 1
+  Loop
+
+End Sub
 __________________________________________________
 
 56 | Excel VBA - Types of Errors
 
+' Syntax Errors - syntax errors, spelling mistakes, etc.
+' Compilation Error - if you list keywords
+' Run Time error - Not easy to know exactly the issue, need to look further into it
 
+'Snytax Error\/\/\/\/
+Msgbox a 555555 ' This will come up with Compile Error - Expected end of statement
+'Mistakes in the coding part
+'Single Lines
+
+'Compilation Errors\/\/\/\/
+Sub abc()
+'Compilation Error
+  for i = 0 to 10
+  MsgBox i
+''''
+End Sub
+'Compilation Error - For without Next, It's missing the Next for the for loop
+' Works over more than one line
+
+'Run Time Error
+Sub abc()
+  MsgBox 6 + 8
+End Sub
+' Say instead of multiplication it does addition due to you mistyping what you wanted to do.
+' This means the code will still execute, it just isn't giving you the intended results.
+' These have to be solved with Trial and Error or double checking everything yourself
 __________________________________________________
 
 57 | Excel VBA - Error Handling
