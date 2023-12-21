@@ -69,11 +69,11 @@ Watched [ ] | Playlist # | Video Name | Length | Playlist Video Link
 [x] | 66 | Excel VBA - Select Case Statement | 4 Min 22 Sec | https://www.youtube.com/watch?v=RpiNs4MH2k8&list=PLWPirh4EWFpEFSYTbKaST6hSlgIFCJjU3&index=66&ab_channel=Tutorialspoint
 [x] | 67 | Excel VBA - Message Box 1 | 4 Min 13 Sec | https://www.youtube.com/watch?v=Ecsgjw9Vp9g&list=PLWPirh4EWFpEFSYTbKaST6hSlgIFCJjU3&index=67&ab_channel=Tutorialspoint
 [x] | 68 | Excel VBA - Message Box 2 | 4 Min 26 Sec | https://www.youtube.com/watch?v=UBa5ni7DF48&list=PLWPirh4EWFpEFSYTbKaST6hSlgIFCJjU3&index=68&ab_channel=Tutorialspoint
-[] | 69 | Excel VBA - Message Box 3 | 3 Min 19 Sec | https://www.youtube.com/watch?v=tbnddeqxYK0&list=PLWPirh4EWFpEFSYTbKaST6hSlgIFCJjU3&index=69&ab_channel=Tutorialspoint
-[] | 70 | Excel VBA - Message Box 4 | 5 Min 19 Sec | https://www.youtube.com/watch?v=0VxHZyoKUMY&list=PLWPirh4EWFpEFSYTbKaST6hSlgIFCJjU3&index=70&ab_channel=Tutorialspoint
-[] | 71 | Excel VBA - Message Box 5 | 2 Min 18 Sec | https://www.youtube.com/watch?v=TjaQ6nY-7_s&list=PLWPirh4EWFpEFSYTbKaST6hSlgIFCJjU3&index=71&ab_channel=Tutorialspoint
-[] | 72 | Excel VBA - Input Box | 5 Min 38 Sec | https://www.youtube.com/watch?v=EHdKMStKkIw&list=PLWPirh4EWFpEFSYTbKaST6hSlgIFCJjU3&index=72&ab_channel=Tutorialspoint
-[] | 73 | Excel VBA - Rows & Columns Count | 3 Min 3 Sec | https://www.youtube.com/watch?v=YFKQZST-K58&list=PLWPirh4EWFpEFSYTbKaST6hSlgIFCJjU3&index=73&ab_channel=Tutorialspoint
+[x] | 69 | Excel VBA - Message Box 3 | 3 Min 19 Sec | https://www.youtube.com/watch?v=tbnddeqxYK0&list=PLWPirh4EWFpEFSYTbKaST6hSlgIFCJjU3&index=69&ab_channel=Tutorialspoint
+[x] | 70 | Excel VBA - Message Box 4 | 5 Min 19 Sec | https://www.youtube.com/watch?v=0VxHZyoKUMY&list=PLWPirh4EWFpEFSYTbKaST6hSlgIFCJjU3&index=70&ab_channel=Tutorialspoint
+[x] | 71 | Excel VBA - Message Box 5 | 2 Min 18 Sec | https://www.youtube.com/watch?v=TjaQ6nY-7_s&list=PLWPirh4EWFpEFSYTbKaST6hSlgIFCJjU3&index=71&ab_channel=Tutorialspoint
+[x] | 72 | Excel VBA - Input Box | 5 Min 38 Sec | https://www.youtube.com/watch?v=EHdKMStKkIw&list=PLWPirh4EWFpEFSYTbKaST6hSlgIFCJjU3&index=72&ab_channel=Tutorialspoint
+[x] | 73 | Excel VBA - Rows & Columns Count | 3 Min 3 Sec | https://www.youtube.com/watch?v=YFKQZST-K58&list=PLWPirh4EWFpEFSYTbKaST6hSlgIFCJjU3&index=73&ab_channel=Tutorialspoint
 [] | 74 | Excel VBA - String Functions Left-Right | 3 Min 37 Sec | https://www.youtube.com/watch?v=Jt35g_kRlTA&list=PLWPirh4EWFpEFSYTbKaST6hSlgIFCJjU3&index=74&ab_channel=Tutorialspoint
 [] | 75 | Excel VBA - String Functions Ucase-Lcase | 2 Min 55 Sec | https://www.youtube.com/watch?v=Nc53a58T3Cs&list=PLWPirh4EWFpEFSYTbKaST6hSlgIFCJjU3&index=75&ab_channel=Tutorialspoint
 [] | 76 | Excel VBA - String Reverse | 1 Min 58 Sec | https://www.youtube.com/watch?v=IPdk9lYgUOI&list=PLWPirh4EWFpEFSYTbKaST6hSlgIFCJjU3&index=76&ab_channel=Tutorialspoint
@@ -1323,27 +1323,115 @@ __________________________________________________
 
 69 | Excel VBA - Message Box 3
 
+Sub MessageBox3()
 
+  ' Error Message symbol (16)
+  MsgBox "Welcome", 16
+
+  ' Help Message Symbol (32)
+  MsgBox "Welcome", 32
+
+  ' Warning Message Symbol with Sound (48)
+  MsgBox "Welcome", 48
+
+  ' Information Symbol (64)
+  MsgBox "Welcome", 64
+
+  ' Can write it like the following
+  MsgBox "Welcome", vbCritical      ' Error Message (16)
+  MsgBox "Welcome", vbInformation   ' Information Message (64)
+  MsgBox "Welcome", vbExclamation   ' Warning Message (48)
+  MsgBox "Welcome", vbQuestion      ' Help Message (32)
+
+End Sub
 __________________________________________________
 
 70 | Excel VBA - Message Box 4
 
+Sub MesssageBox4()
 
+  ' When you write it as a variable you need to put it in the parantheses
+  a = MsgBox("Welcome", 1)
+  'OK is equal to 1 and Cancel is equal to 2
+  MsgBox a
+
+  a = MsgBox("Welcome", 2)
+  ' Abort equals 3, Retry equals 4, Ignore equals 5
+  MsgBox a
+
+End Sub
+
+Sub MesssageBox4()
+
+  ' When you write it as a variable you need to put it in the parantheses
+  a = MsgBox("Welcome", 1)
+  MsgBox a
+
+  If a = 1 Then
+    MsgBox "OK Button was pressed"
+  Else
+    MsgBox "Cancel Button was pressed"
+  End If
+
+End Sub
 __________________________________________________
 
 71 | Excel VBA - Message Box 5
 
+Sub MessageBox5()
+  
+  MsgBox "Welcome" vbOKOnly, "TutorialsPoint"
 
+  MsgBox "Welcome to VBA" vbOKOnly, "MS Excel VBA"
+
+
+End Sub
 __________________________________________________
 
 72 | Excel VBA - Input Box
 
+Sub InputBox1()
 
-__________________________________________________
+  ' Make sure to have the parantheses
+  ' Enter is Main Text, MS Excel VBA is the title, Hello is the default text, the next is x position, then y position
+  a = InputBox("Enter", "MS EXCEL VBA", "Hello", 2000, 2000)
+  MsgBox a
+
+End Sub
+________________________________________________
 
 73 | Excel VBA - Rows & Columns Count
 
+Sub Row_Column_Count()
+  Dim x As Integer
+  Dim y As Integer
+  'Integer variable can only be -32,768 - 32,768
+  'OverFlow Error will come up
 
+  x = Rows.Count
+  MsgBox x
+
+  y = Columns.Count
+  MsgBox y
+  
+
+End Sub
+
+
+
+Sub Row_Column_Count()
+  Dim x As Long
+  Dim y As Long
+  'Long variable can be -2,147,483,648 - 2,147,483,648
+
+  x = Rows.Count
+  MsgBox x
+
+  y = Columns.Count
+  MsgBox y
+  
+
+End Sub
 __________________________________________________
 
 74 | Excel VBA - String Functions Left-Right
