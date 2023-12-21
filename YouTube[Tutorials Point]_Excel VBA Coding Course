@@ -67,8 +67,8 @@ Watched [ ] | Playlist # | Video Name | Length | Playlist Video Link
 [x] | 64 | Excel VBA - If Elseif Else with AND Operator | 4 Min 59 Sec | https://www.youtube.com/watch?v=vzlNWauQcic&list=PLWPirh4EWFpEFSYTbKaST6hSlgIFCJjU3&index=64&ab_channel=Tutorialspoint
 [x] | 65 | Excel VBA - If Else Using For Loop | 5 Min 27 Sec | https://www.youtube.com/watch?v=uqsOhTE4g7E&list=PLWPirh4EWFpEFSYTbKaST6hSlgIFCJjU3&index=65&ab_channel=Tutorialspoint
 [x] | 66 | Excel VBA - Select Case Statement | 4 Min 22 Sec | https://www.youtube.com/watch?v=RpiNs4MH2k8&list=PLWPirh4EWFpEFSYTbKaST6hSlgIFCJjU3&index=66&ab_channel=Tutorialspoint
-[] | 67 | Excel VBA - Message Box 1 | 4 Min 13 Sec | https://www.youtube.com/watch?v=Ecsgjw9Vp9g&list=PLWPirh4EWFpEFSYTbKaST6hSlgIFCJjU3&index=67&ab_channel=Tutorialspoint
-[] | 68 | Excel VBA - Message Box 2 | 4 Min 26 Sec | https://www.youtube.com/watch?v=UBa5ni7DF48&list=PLWPirh4EWFpEFSYTbKaST6hSlgIFCJjU3&index=68&ab_channel=Tutorialspoint
+[x] | 67 | Excel VBA - Message Box 1 | 4 Min 13 Sec | https://www.youtube.com/watch?v=Ecsgjw9Vp9g&list=PLWPirh4EWFpEFSYTbKaST6hSlgIFCJjU3&index=67&ab_channel=Tutorialspoint
+[x] | 68 | Excel VBA - Message Box 2 | 4 Min 26 Sec | https://www.youtube.com/watch?v=UBa5ni7DF48&list=PLWPirh4EWFpEFSYTbKaST6hSlgIFCJjU3&index=68&ab_channel=Tutorialspoint
 [] | 69 | Excel VBA - Message Box 3 | 3 Min 19 Sec | https://www.youtube.com/watch?v=tbnddeqxYK0&list=PLWPirh4EWFpEFSYTbKaST6hSlgIFCJjU3&index=69&ab_channel=Tutorialspoint
 [] | 70 | Excel VBA - Message Box 4 | 5 Min 19 Sec | https://www.youtube.com/watch?v=0VxHZyoKUMY&list=PLWPirh4EWFpEFSYTbKaST6hSlgIFCJjU3&index=70&ab_channel=Tutorialspoint
 [] | 71 | Excel VBA - Message Box 5 | 2 Min 18 Sec | https://www.youtube.com/watch?v=TjaQ6nY-7_s&list=PLWPirh4EWFpEFSYTbKaST6hSlgIFCJjU3&index=71&ab_channel=Tutorialspoint
@@ -1277,12 +1277,48 @@ __________________________________________________
 
 67 | Excel VBA - Message Box 1
 
+Sub MessageBox1()
 
+  MsgBox "Welcome to Tutorials Point india"
+  
+  ' Numbers don't need quotations
+  MsgBox 10000
+
+  ' Date uses Hashes in front and behind
+  MsgBox #10/12/2020#
+
+End Sub
 __________________________________________________
 
 68 | Excel VBA - Message Box 2
 
+Sub MessageBox2()
 
+  ' Options (1) - Ok, Cancel
+  MsgBox "Welcome", 1
+  ' Options (2) - Abort, Retry, Ignore
+  MsgBox "Welcome", 2
+  ' Options (3) - Yes, No, Cancel
+  MsgBox "Welcome", 3
+  ' Options (4) - Yes, No
+  MsgBox "Welcome", 4
+  ' Options (5) - Retry, Cancel
+  MsgBox "Welcome", 5
+  ' Options (6) - (6 and beyond) - Ok
+  MsgBox "Welcome", 6
+  ' Options (7) - (6 and beyond) - Ok
+  MsgBox "Welcome", 7
+  ' Options (8) - (6 and beyond) - Ok
+  MsgBox "Welcome", 8
+
+
+
+  ' There are shortcuts when you type the comma after the message
+  ' Find the one you are looking for and select it and press tab.
+  MsgBox "Welcome", vbOKCancel
+  MsgBox "Welcome", vbRetryCancel
+
+End Sub
 __________________________________________________
 
 69 | Excel VBA - Message Box 3
