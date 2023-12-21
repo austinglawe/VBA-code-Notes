@@ -64,9 +64,9 @@ Watched [ ] | Playlist # | Video Name | Length | Playlist Video Link
 [x] | 61 | Excel VBA - If Statements | 2 Min 38 Sec | https://www.youtube.com/watch?v=_r2Psbn4t1Y&list=PLWPirh4EWFpEFSYTbKaST6hSlgIFCJjU3&index=61&ab_channel=Tutorialspoint
 [x] | 62 | Excel VBA - If Else Statements | 3 Min 26 Sec | https://www.youtube.com/watch?v=iaAv99bidUs&list=PLWPirh4EWFpEFSYTbKaST6hSlgIFCJjU3&index=62&ab_channel=Tutorialspoint
 [x] | 63 | Excel VBA - If Elseif Else Statement | 4 Min 36 Sec | https://www.youtube.com/watch?v=KdmJef74pDc&list=PLWPirh4EWFpEFSYTbKaST6hSlgIFCJjU3&index=63&ab_channel=Tutorialspoint
-[] | 64 | Excel VBA - If Elseif Else with AND Operator | 4 Min 59 Sec | https://www.youtube.com/watch?v=vzlNWauQcic&list=PLWPirh4EWFpEFSYTbKaST6hSlgIFCJjU3&index=64&ab_channel=Tutorialspoint
-[] | 65 | Excel VBA - If Else Using For Loop | 5 Min 27 Sec | https://www.youtube.com/watch?v=uqsOhTE4g7E&list=PLWPirh4EWFpEFSYTbKaST6hSlgIFCJjU3&index=65&ab_channel=Tutorialspoint
-[] | 66 | Excel VBA - Select Case Statement | 4 Min 22 Sec | https://www.youtube.com/watch?v=RpiNs4MH2k8&list=PLWPirh4EWFpEFSYTbKaST6hSlgIFCJjU3&index=66&ab_channel=Tutorialspoint
+[x] | 64 | Excel VBA - If Elseif Else with AND Operator | 4 Min 59 Sec | https://www.youtube.com/watch?v=vzlNWauQcic&list=PLWPirh4EWFpEFSYTbKaST6hSlgIFCJjU3&index=64&ab_channel=Tutorialspoint
+[x] | 65 | Excel VBA - If Else Using For Loop | 5 Min 27 Sec | https://www.youtube.com/watch?v=uqsOhTE4g7E&list=PLWPirh4EWFpEFSYTbKaST6hSlgIFCJjU3&index=65&ab_channel=Tutorialspoint
+[x] | 66 | Excel VBA - Select Case Statement | 4 Min 22 Sec | https://www.youtube.com/watch?v=RpiNs4MH2k8&list=PLWPirh4EWFpEFSYTbKaST6hSlgIFCJjU3&index=66&ab_channel=Tutorialspoint
 [] | 67 | Excel VBA - Message Box 1 | 4 Min 13 Sec | https://www.youtube.com/watch?v=Ecsgjw9Vp9g&list=PLWPirh4EWFpEFSYTbKaST6hSlgIFCJjU3&index=67&ab_channel=Tutorialspoint
 [] | 68 | Excel VBA - Message Box 2 | 4 Min 26 Sec | https://www.youtube.com/watch?v=UBa5ni7DF48&list=PLWPirh4EWFpEFSYTbKaST6hSlgIFCJjU3&index=68&ab_channel=Tutorialspoint
 [] | 69 | Excel VBA - Message Box 3 | 3 Min 19 Sec | https://www.youtube.com/watch?v=tbnddeqxYK0&list=PLWPirh4EWFpEFSYTbKaST6hSlgIFCJjU3&index=69&ab_channel=Tutorialspoint
@@ -1187,11 +1187,11 @@ __________________________________________________
 
 Sub IF_Test3()
 
-  If Range("A2").Value <= 35 then
+  If Range("A2").Value < 35 then
     Range("C2").Value = "Fail"
   Elseif Range("A2").Value <= 60 then
     Range("C2").Value = "C Grade"
-  Elseif Range("A2").Value <= 80 then
+  Elseif Range("A2").Value < 80 then
     Range("C2").Value = "B Grade"
   Else
     Range("C2").Value = "A Grade"
@@ -1202,17 +1202,77 @@ __________________________________________________
 
 64 | Excel VBA - If Elseif Else with AND Operator
 
+Sub IF_Test4()
 
+  If Range("A2").Value >= 0 And Range("A2").Value < 35 Then
+    Range("C2").Value = "Fail"
+
+  ElseIf Range("A2").Value >= 35 And Range("A2").Value <= 60 Then
+    Range("C2").Value = "C Grade"
+
+  ElseIf Range("A2").Value >= 61 And Range("A2").Value < 80 Then
+    Range("C2").Value = "B Grade"
+
+  ElseIf Range("A2").Value >= 80 And Range("A2").Value <= 100 Then
+    Range("C2").Value = "A Grade"
+
+  Else
+    Range("C2").Value = "Invalid"
+
+  End If
+
+End Sub
 __________________________________________________
 
 65 | Excel VBA - If Else Using For Loop
 
+Sub If_Else_Using_For()
+  Dim x As Integer
+  ' Students Names start in row 2
+  ' Cells(Row, Column)
+  
+  For x = To 20
+    
+    If Cells(x, 2).Value >= 35 Then
+      Cells(x, 3).Value = "Pass"
+      Cells(x, 3).Interior.Color = vbGreen
 
+    Else 
+      Cells(x, 3).Value = "Fail"
+      Cells(x, 3).Interior.Color = vbRed
+
+    End If
+
+  Next x
+
+End Sub
 __________________________________________________
 
 66 | Excel VBA - Select Case Statement
 
+Sub Select_Case_Statement()
+  Dim var1 As Integer
+  var1 = InputBox("Enter Month Number")
+  
+  Select Case var1
+    Case 1: MsgBox "Month is Jan"
+    Case 2: MsgBox "Month is Feb"
+    Case 3: MsgBox "Month is Mar"
+    Case 4: MsgBox "Month is Apr"
+    Case 5: MsgBox "Month is May"
+    Case 6: MsgBox "Month is June"
+    Case 7: MsgBox "Month is July"
+    Case 8: MsgBox "Month is Aug"
+    Case 9: MsgBox "Month is Sept"
+    Case 10: MsgBox "Month is Oct"
+    Case 11: MsgBox "Month is Nov"
+    Case 12: MsgBox "Month is Dec"
 
+    Case Else: MsgBox "Invalid Month"
+  
+  End Select
+
+End Sub
 __________________________________________________
 
 67 | Excel VBA - Message Box 1
