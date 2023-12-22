@@ -74,10 +74,10 @@ Watched [ ] | Playlist # | Video Name | Length | Playlist Video Link
 [x] | 71 | Excel VBA - Message Box 5 | 2 Min 18 Sec | https://www.youtube.com/watch?v=TjaQ6nY-7_s&list=PLWPirh4EWFpEFSYTbKaST6hSlgIFCJjU3&index=71&ab_channel=Tutorialspoint
 [x] | 72 | Excel VBA - Input Box | 5 Min 38 Sec | https://www.youtube.com/watch?v=EHdKMStKkIw&list=PLWPirh4EWFpEFSYTbKaST6hSlgIFCJjU3&index=72&ab_channel=Tutorialspoint
 [x] | 73 | Excel VBA - Rows & Columns Count | 3 Min 3 Sec | https://www.youtube.com/watch?v=YFKQZST-K58&list=PLWPirh4EWFpEFSYTbKaST6hSlgIFCJjU3&index=73&ab_channel=Tutorialspoint
-[] | 74 | Excel VBA - String Functions Left-Right | 3 Min 37 Sec | https://www.youtube.com/watch?v=Jt35g_kRlTA&list=PLWPirh4EWFpEFSYTbKaST6hSlgIFCJjU3&index=74&ab_channel=Tutorialspoint
-[] | 75 | Excel VBA - String Functions Ucase-Lcase | 2 Min 55 Sec | https://www.youtube.com/watch?v=Nc53a58T3Cs&list=PLWPirh4EWFpEFSYTbKaST6hSlgIFCJjU3&index=75&ab_channel=Tutorialspoint
-[] | 76 | Excel VBA - String Reverse | 1 Min 58 Sec | https://www.youtube.com/watch?v=IPdk9lYgUOI&list=PLWPirh4EWFpEFSYTbKaST6hSlgIFCJjU3&index=76&ab_channel=Tutorialspoint
-[] | 77 | Excel VBA - Create Functions | 2 Min 45 Sec | https://www.youtube.com/watch?v=j6hmdfu5A5U&list=PLWPirh4EWFpEFSYTbKaST6hSlgIFCJjU3&index=77&ab_channel=Tutorialspoint
+[x] | 74 | Excel VBA - String Functions Left-Right | 3 Min 37 Sec | https://www.youtube.com/watch?v=Jt35g_kRlTA&list=PLWPirh4EWFpEFSYTbKaST6hSlgIFCJjU3&index=74&ab_channel=Tutorialspoint
+[x] | 75 | Excel VBA - String Functions Ucase-Lcase | 2 Min 55 Sec | https://www.youtube.com/watch?v=Nc53a58T3Cs&list=PLWPirh4EWFpEFSYTbKaST6hSlgIFCJjU3&index=75&ab_channel=Tutorialspoint
+[x] | 76 | Excel VBA - String Reverse | 1 Min 58 Sec | https://www.youtube.com/watch?v=IPdk9lYgUOI&list=PLWPirh4EWFpEFSYTbKaST6hSlgIFCJjU3&index=76&ab_channel=Tutorialspoint
+[x] | 77 | Excel VBA - Create Functions | 2 Min 45 Sec | https://www.youtube.com/watch?v=j6hmdfu5A5U&list=PLWPirh4EWFpEFSYTbKaST6hSlgIFCJjU3&index=77&ab_channel=Tutorialspoint
 [] | 78 | Excel VBA - Date Add | 5 Min 47 Sec | https://www.youtube.com/watch?v=TCPiP79lrqM&list=PLWPirh4EWFpEFSYTbKaST6hSlgIFCJjU3&index=78&ab_channel=Tutorialspoint
 [] | 79 | Excel VBA - Date Part | 3 Min 11 Sec | https://www.youtube.com/watch?v=U7sq6pfnXZs&list=PLWPirh4EWFpEFSYTbKaST6hSlgIFCJjU3&index=79&ab_channel=Tutorialspoint
 [] | 80 | Excel VBA - DD/MM/YYYY | 1 Min 38 Sec | https://www.youtube.com/watch?v=LxQ3RU8YoLw&list=PLWPirh4EWFpEFSYTbKaST6hSlgIFCJjU3&index=80&ab_channel=Tutorialspoint
@@ -1436,22 +1436,62 @@ __________________________________________________
 
 74 | Excel VBA - String Functions Left-Right
 
+Sub String_Functions_Left()
+  Dim x As Integer
 
+  ' Left 2 Characters (First 2)
+  For x = 2 To 13
+    Cells(x, 2). Value = Left(Cells(x, 1).Value, 2)
+  Next x
+
+End Sub
+
+
+
+
+Sub String_Functions_Right()
+  Dim x As Integer
+
+  ' Right 2 (Last 2) 
+  For x = 2 To 13
+    Cells(x, 3). Value = Right(Cells(x, 1).Value, 2)
+  Next x
+
+End Sub
 __________________________________________________
 
 75 | Excel VBA - String Functions Ucase-Lcase
 
+Sub Str_Functions_Uppercase_Lowercase()
+  Dim x As Integer
 
+  For x = 2 To 8
+    Cells(x, 2).Value = UCase(Cells(x, 1).Value
+    Cells(x, 2).Value = LCase(Cells(x, 1).Value
+  Next x
+
+End Sub
 __________________________________________________
 
 76 | Excel VBA - String Reverse
 
+Sub Str_Functions_String_Reverse()
+  Dim x As Integer
 
+  For x = 2 To 8
+    Cells(x, 2).Value = StrReverse(Cells(x, 1).Value)
+  Next x
+
+End Sub
 __________________________________________________
 
 77 | Excel VBA - Create Functions
 
+Function add2Numbers(x As Integer, y As Integer) As Integer
 
+add2Numbers = x + y
+
+End Function
 __________________________________________________
 
 78 | Excel VBA - Date Add
