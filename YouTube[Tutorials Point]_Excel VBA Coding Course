@@ -82,8 +82,8 @@ Watched [ ] | Playlist # | Video Name | Length | Playlist Video Link
 [x] | 79 | Excel VBA - Date Part | 3 Min 11 Sec | https://www.youtube.com/watch?v=U7sq6pfnXZs&list=PLWPirh4EWFpEFSYTbKaST6hSlgIFCJjU3&index=79&ab_channel=Tutorialspoint
 [x] | 80 | Excel VBA - DD/MM/YYYY | 1 Min 38 Sec | https://www.youtube.com/watch?v=LxQ3RU8YoLw&list=PLWPirh4EWFpEFSYTbKaST6hSlgIFCJjU3&index=80&ab_channel=Tutorialspoint
 [Should be 78 and then they go down the rest of the way] | 81 | Excel VBA - Dates | 3 Min 38 Sec | https://www.youtube.com/watch?v=dRwwCRhrsyQ&list=PLWPirh4EWFpEFSYTbKaST6hSlgIFCJjU3&index=81&ab_channel=Tutorialspoint
-[] | 82 | Excel VBA - Time Function Part 1 | 4 Min 4 Sec | https://www.youtube.com/watch?v=XmAS2NBFbaA&list=PLWPirh4EWFpEFSYTbKaST6hSlgIFCJjU3&index=82&ab_channel=Tutorialspoint
-[] | 83 | Excel VBA - Time Function Part 2 | 3 Min 0 Sec | https://www.youtube.com/watch?v=JAp_kuKu7lE&list=PLWPirh4EWFpEFSYTbKaST6hSlgIFCJjU3&index=83&ab_channel=Tutorialspoint
+[x] | 82 | Excel VBA - Time Function Part 1 | 4 Min 4 Sec | https://www.youtube.com/watch?v=XmAS2NBFbaA&list=PLWPirh4EWFpEFSYTbKaST6hSlgIFCJjU3&index=82&ab_channel=Tutorialspoint
+[x] | 83 | Excel VBA - Time Function Part 2 | 3 Min 0 Sec | https://www.youtube.com/watch?v=JAp_kuKu7lE&list=PLWPirh4EWFpEFSYTbKaST6hSlgIFCJjU3&index=83&ab_channel=Tutorialspoint
 [] | 84 | Excel VBA - 1D Array Static | 4 Min 49 Sec | https://www.youtube.com/watch?v=F4uhU3_CIfc&list=PLWPirh4EWFpEFSYTbKaST6hSlgIFCJjU3&index=84&ab_channel=Tutorialspoint
 [] | 85 | Excel VBA - 2D Array Static | 6 Min 14 Sec | https://www.youtube.com/watch?v=h0FIltJHQd4&list=PLWPirh4EWFpEFSYTbKaST6hSlgIFCJjU3&index=85&ab_channel=Tutorialspoint
 [] | 86 | Excel VBA - Dynamic Array | 4 Min 10 Sec | https://www.youtube.com/watch?v=8PJncmodxyE&list=PLWPirh4EWFpEFSYTbKaST6hSlgIFCJjU3&index=86&ab_channel=Tutorialspoint
@@ -1588,12 +1588,36 @@ __________________________________________________
 
 82 | Excel VBA - Time Function Part 1
 
+Sub Time_1_Now_Time()
 
+  MsgBox Now()                  ' Displays Date and Time
+  MsgBox Time()                 ' Displays Only Time
+
+  MsgBox Hour(Time)             ' Displays Hour (24 Hour Time)
+  MsgBox Minute(Time)           ' Displays Minute
+  MsgBox Second(Time)           ' Displays Seconds
+
+  MsgBox Hour("3:10:13")        ' Displays 3
+  MsgBox Minute("3:10:13")      ' Displays 10
+  MsgBox Second("3:10:13")      ' Displays 13
+
+End Sub
 __________________________________________________
 
 83 | Excel VBA - Time Function Part 2
 
+Sub Time_Timeserial_TimeValue()
 
+  ' TimeSerial(Hour, Minute, Second) - 24 hour time sequence
+  MsgBox TimeSerial(3, 4, 5)
+  MsgBox TimeSerial(12, 59, 59)
+
+  'Hour:Minute:Second (Gives AM, PM)
+  MsgBox TimeValue("20:19")
+  MsgBox TimeValue("3:10:10")
+  MsgBox TimeValue("2:10:8")
+
+End Sub
 __________________________________________________
 
 84 | Excel VBA - 1D Array Static
