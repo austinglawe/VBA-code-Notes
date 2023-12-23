@@ -79,9 +79,9 @@ Watched [ ] | Playlist # | Video Name | Length | Playlist Video Link
 [x] | 76 | Excel VBA - String Reverse | 1 Min 58 Sec | https://www.youtube.com/watch?v=IPdk9lYgUOI&list=PLWPirh4EWFpEFSYTbKaST6hSlgIFCJjU3&index=76&ab_channel=Tutorialspoint
 [x] | 77 | Excel VBA - Create Functions | 2 Min 45 Sec | https://www.youtube.com/watch?v=j6hmdfu5A5U&list=PLWPirh4EWFpEFSYTbKaST6hSlgIFCJjU3&index=77&ab_channel=Tutorialspoint
 [Wrong order?] | 78 | Excel VBA - Date Add | 5 Min 47 Sec | https://www.youtube.com/watch?v=TCPiP79lrqM&list=PLWPirh4EWFpEFSYTbKaST6hSlgIFCJjU3&index=78&ab_channel=Tutorialspoint
-[] | 79 | Excel VBA - Date Part | 3 Min 11 Sec | https://www.youtube.com/watch?v=U7sq6pfnXZs&list=PLWPirh4EWFpEFSYTbKaST6hSlgIFCJjU3&index=79&ab_channel=Tutorialspoint
-[] | 80 | Excel VBA - DD/MM/YYYY | 1 Min 38 Sec | https://www.youtube.com/watch?v=LxQ3RU8YoLw&list=PLWPirh4EWFpEFSYTbKaST6hSlgIFCJjU3&index=80&ab_channel=Tutorialspoint
-[] | 81 | Excel VBA - Dates | 3 Min 38 Sec | https://www.youtube.com/watch?v=dRwwCRhrsyQ&list=PLWPirh4EWFpEFSYTbKaST6hSlgIFCJjU3&index=81&ab_channel=Tutorialspoint
+[x] | 79 | Excel VBA - Date Part | 3 Min 11 Sec | https://www.youtube.com/watch?v=U7sq6pfnXZs&list=PLWPirh4EWFpEFSYTbKaST6hSlgIFCJjU3&index=79&ab_channel=Tutorialspoint
+[x] | 80 | Excel VBA - DD/MM/YYYY | 1 Min 38 Sec | https://www.youtube.com/watch?v=LxQ3RU8YoLw&list=PLWPirh4EWFpEFSYTbKaST6hSlgIFCJjU3&index=80&ab_channel=Tutorialspoint
+[Should be 78 and then they go down the rest of the way] | 81 | Excel VBA - Dates | 3 Min 38 Sec | https://www.youtube.com/watch?v=dRwwCRhrsyQ&list=PLWPirh4EWFpEFSYTbKaST6hSlgIFCJjU3&index=81&ab_channel=Tutorialspoint
 [] | 82 | Excel VBA - Time Function Part 1 | 4 Min 4 Sec | https://www.youtube.com/watch?v=XmAS2NBFbaA&list=PLWPirh4EWFpEFSYTbKaST6hSlgIFCJjU3&index=82&ab_channel=Tutorialspoint
 [] | 83 | Excel VBA - Time Function Part 2 | 3 Min 0 Sec | https://www.youtube.com/watch?v=JAp_kuKu7lE&list=PLWPirh4EWFpEFSYTbKaST6hSlgIFCJjU3&index=83&ab_channel=Tutorialspoint
 [] | 84 | Excel VBA - 1D Array Static | 4 Min 49 Sec | https://www.youtube.com/watch?v=F4uhU3_CIfc&list=PLWPirh4EWFpEFSYTbKaST6hSlgIFCJjU3&index=84&ab_channel=Tutorialspoint
@@ -1535,17 +1535,55 @@ __________________________________________________
 
 79 | Excel VBA - Date Part
 
+Sub date4_DatePart()
+  Dim mydate As Variant
 
+  mydate = #12/20/2016#
+  MsgBox mydate
+
+  MsgBox DatePart("YYYY", mydate) ' Displays year
+  MsgBox DatePart("d", mydate)    ' Displays day
+  MsgBox DatePart("m", mydate)    ' Displays month
+  MsgBox DatePart("q", mydate)    ' Displays quarter
+
+End Sub
 __________________________________________________
 
 80 | Excel VBA - DD/MM/YYYY
 
+Sub Date5_Day_Month_Year()
+  Dim mydate As Variant
 
+  mydate = #12/20/2016#
+  MsgBox mydate
+
+  MsgBox Day(mydate)
+  MsgBox Month(mydate)
+  MsgBox Year(mydate)
+
+End Sub
 __________________________________________________
 
 81 | Excel VBA - Dates
 
+Sub Date1_Date()
+  Dim a As Variant
+  a = Date
+  
+  MsgBox a
 
+End Sub
+
+
+' CDate = converts date
+Sub Date2_CDate()
+  Dim b As Variant
+  b = CDate("20 Dec 2020")
+  ' Displays MM/DD/YYYY
+
+  MsgBox b
+
+End Sub
 __________________________________________________
 
 82 | Excel VBA - Time Function Part 1
