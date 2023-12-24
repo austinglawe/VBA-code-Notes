@@ -95,12 +95,12 @@ Watched [ ] | Playlist # | Video Name | Length | Playlist Video Link
 [x] | 92 | Excel VBA - Command Button | 8 Min 14 Sec | https://www.youtube.com/watch?v=NisHUnn-PZo&list=PLWPirh4EWFpEFSYTbKaST6hSlgIFCJjU3&index=92&ab_channel=Tutorialspoint
 [x] | 93 | Excel VBA - Radio Button | 5 Min 9 Sec | https://www.youtube.com/watch?v=N6epAKs5NWc&list=PLWPirh4EWFpEFSYTbKaST6hSlgIFCJjU3&index=93&ab_channel=Tutorialspoint
 [x] | 94 | Excel VBA - Check Box | 8 Min 49 Sec | https://www.youtube.com/watch?v=4SJGeHgoAnc&list=PLWPirh4EWFpEFSYTbKaST6hSlgIFCJjU3&index=94&ab_channel=Tutorialspoint
-[] | 95 | Excel VBA - List Box | 5 Min 2 Sec | https://www.youtube.com/watch?v=us8mCNQx9Ww&list=PLWPirh4EWFpEFSYTbKaST6hSlgIFCJjU3&index=95&ab_channel=Tutorialspoint
-[] | 96 | Excel VBA - Frames | 4 Min 49 Sec | https://www.youtube.com/watch?v=xxeSoNLqkoc&list=PLWPirh4EWFpEFSYTbKaST6hSlgIFCJjU3&index=96&ab_channel=Tutorialspoint
-[] | 97 | Excel VBA - Multipage | 3 Min 40 Sec | https://www.youtube.com/watch?v=l2NGEAAsqOI&list=PLWPirh4EWFpEFSYTbKaST6hSlgIFCJjU3&index=97&ab_channel=Tutorialspoint
-[] | 98 | Excel VBA - Background | 6 Min 13 Sec | https://www.youtube.com/watch?v=FeBge6LMmTw&list=PLWPirh4EWFpEFSYTbKaST6hSlgIFCJjU3&index=98&ab_channel=Tutorialspoint
-[] | 99 | Excel VBA - Text Box | 7 Min 58 Sec | https://www.youtube.com/watch?v=JwE4vVqE7CQ&list=PLWPirh4EWFpEFSYTbKaST6hSlgIFCJjU3&index=99&ab_channel=Tutorialspoint
-[] | 100 | Excel VBA - User Form Event | 2 Min 53 Sec | https://www.youtube.com/watch?v=0ikwkEqHhlQ&list=PLWPirh4EWFpEFSYTbKaST6hSlgIFCJjU3&index=100&ab_channel=Tutorialspoint
+[x] | 95 | Excel VBA - List Box | 5 Min 2 Sec | https://www.youtube.com/watch?v=us8mCNQx9Ww&list=PLWPirh4EWFpEFSYTbKaST6hSlgIFCJjU3&index=95&ab_channel=Tutorialspoint
+[x] | 96 | Excel VBA - Frames | 4 Min 49 Sec | https://www.youtube.com/watch?v=xxeSoNLqkoc&list=PLWPirh4EWFpEFSYTbKaST6hSlgIFCJjU3&index=96&ab_channel=Tutorialspoint
+[x] | 97 | Excel VBA - Multipage | 3 Min 40 Sec | https://www.youtube.com/watch?v=l2NGEAAsqOI&list=PLWPirh4EWFpEFSYTbKaST6hSlgIFCJjU3&index=97&ab_channel=Tutorialspoint
+[x] | 98 | Excel VBA - Background | 6 Min 13 Sec | https://www.youtube.com/watch?v=FeBge6LMmTw&list=PLWPirh4EWFpEFSYTbKaST6hSlgIFCJjU3&index=98&ab_channel=Tutorialspoint
+[x] | 99 | Excel VBA - Text Box | 7 Min 58 Sec | https://www.youtube.com/watch?v=JwE4vVqE7CQ&list=PLWPirh4EWFpEFSYTbKaST6hSlgIFCJjU3&index=99&ab_channel=Tutorialspoint
+[x] | 100 | Excel VBA - User Form Event | 2 Min 53 Sec | https://www.youtube.com/watch?v=0ikwkEqHhlQ&list=PLWPirh4EWFpEFSYTbKaST6hSlgIFCJjU3&index=100&ab_channel=Tutorialspoint
 
 
 ____________________________________________________________________________________________________________________________________________________________________________________________
@@ -1832,30 +1832,54 @@ __________________________________________________
 
 95 | Excel VBA - List Box
 
+Private Sub ListBox1_DblClick(ByVal Cancel As MSForms.ReturnBoolean)
 
+  MsgBox UserForm5.ListBox1.Value
+
+End Sub
 __________________________________________________
 
 96 | Excel VBA - Frames
 
+Private Sub CommandButton2_Click()
 
+  UserForm6.Frame1.Visible = not UserForm6.Frame1.Visible
+
+End Sub
 __________________________________________________
 
 97 | Excel VBA - Multipage
 
-
+' No code, just instructions for creating a user form
 __________________________________________________
 
 98 | Excel VBA - Background
 
-
+' No code, just instructions for creating a user form
 __________________________________________________
 
 99 | Excel VBA - Text Box
 
+Private Sub CommandButton1_Click()
 
+  UserName = UserForm9.TextBox1.Value
+  Password = UserForm9.TextBox2.Value
+
+  If UserName <> "" And Password <> "" Then
+    MsgBox "Login Success"
+    UserForm9.Hide
+  Else
+    MsgBox "Kindly enter the credentials"
+  End If
+
+End Sub
 __________________________________________________
 
 100 | Excel VBA - User Form Event
 
+Sub Call_UserForm()
 
+  UserForm9.Show
+
+End Sub
 __________________________________________________
