@@ -91,10 +91,10 @@ Watched [ ] | Playlist # | Video Name | Length | Playlist Video Link
 [x] | 88 | Excel VBA - Double Click | 2 Min 20 Sec | https://www.youtube.com/watch?v=vFd2vZw4yJ0&list=PLWPirh4EWFpEFSYTbKaST6hSlgIFCJjU3&index=88&ab_channel=Tutorialspoint
 [x] | 89 | Excel VBA - Sheet Activate | 1 Min 59 Sec | https://www.youtube.com/watch?v=nYhUeYx5IM4&list=PLWPirh4EWFpEFSYTbKaST6hSlgIFCJjU3&index=89&ab_channel=Tutorialspoint
 [x] | 90 | Excel VBA - Workbook Open | 4 Min 12 Sec | https://www.youtube.com/watch?v=QZAOgfO9FTc&list=PLWPirh4EWFpEFSYTbKaST6hSlgIFCJjU3&index=90&ab_channel=Tutorialspoint
-[] | 91 | Excel VBA - Create User Form | 5 Min 28 Sec | https://www.youtube.com/watch?v=grTSWspGeTU&list=PLWPirh4EWFpEFSYTbKaST6hSlgIFCJjU3&index=91&ab_channel=Tutorialspoint
-[] | 92 | Excel VBA - Command Button | 8 Min 14 Sec | https://www.youtube.com/watch?v=NisHUnn-PZo&list=PLWPirh4EWFpEFSYTbKaST6hSlgIFCJjU3&index=92&ab_channel=Tutorialspoint
-[] | 93 | Excel VBA - Radio Button | 5 Min 9 Sec | https://www.youtube.com/watch?v=N6epAKs5NWc&list=PLWPirh4EWFpEFSYTbKaST6hSlgIFCJjU3&index=93&ab_channel=Tutorialspoint
-[] | 94 | Excel VBA - Check Box | 8 Min 49 Sec | https://www.youtube.com/watch?v=4SJGeHgoAnc&list=PLWPirh4EWFpEFSYTbKaST6hSlgIFCJjU3&index=94&ab_channel=Tutorialspoint
+[x] | 91 | Excel VBA - Create User Form | 5 Min 28 Sec | https://www.youtube.com/watch?v=grTSWspGeTU&list=PLWPirh4EWFpEFSYTbKaST6hSlgIFCJjU3&index=91&ab_channel=Tutorialspoint
+[x] | 92 | Excel VBA - Command Button | 8 Min 14 Sec | https://www.youtube.com/watch?v=NisHUnn-PZo&list=PLWPirh4EWFpEFSYTbKaST6hSlgIFCJjU3&index=92&ab_channel=Tutorialspoint
+[x] | 93 | Excel VBA - Radio Button | 5 Min 9 Sec | https://www.youtube.com/watch?v=N6epAKs5NWc&list=PLWPirh4EWFpEFSYTbKaST6hSlgIFCJjU3&index=93&ab_channel=Tutorialspoint
+[x] | 94 | Excel VBA - Check Box | 8 Min 49 Sec | https://www.youtube.com/watch?v=4SJGeHgoAnc&list=PLWPirh4EWFpEFSYTbKaST6hSlgIFCJjU3&index=94&ab_channel=Tutorialspoint
 [] | 95 | Excel VBA - List Box | 5 Min 2 Sec | https://www.youtube.com/watch?v=us8mCNQx9Ww&list=PLWPirh4EWFpEFSYTbKaST6hSlgIFCJjU3&index=95&ab_channel=Tutorialspoint
 [] | 96 | Excel VBA - Frames | 4 Min 49 Sec | https://www.youtube.com/watch?v=xxeSoNLqkoc&list=PLWPirh4EWFpEFSYTbKaST6hSlgIFCJjU3&index=96&ab_channel=Tutorialspoint
 [] | 97 | Excel VBA - Multipage | 3 Min 40 Sec | https://www.youtube.com/watch?v=l2NGEAAsqOI&list=PLWPirh4EWFpEFSYTbKaST6hSlgIFCJjU3&index=97&ab_channel=Tutorialspoint
@@ -1747,22 +1747,87 @@ __________________________________________________
 
 91 | Excel VBA - Create User Form
 
-
+' No code, just instructions for creating a user form
 __________________________________________________
 
 92 | Excel VBA - Command Button
 
+Private Sub CommandButton1_Click()
 
+  UserForm2.Label1.Caption = UserForm2.Label1.Caption + 1
+
+End Sub
+
+
+Private Sub CommandButton2_Click()
+
+  UserForm2.Label1.Caption = UserForm2.Label1.Caption - 1
+
+End Sub
 __________________________________________________
 
 93 | Excel VBA - Radio Button
 
+Private Sub CommandButton1_Click()
+  Dim Answer As String
 
+  If UserForm3.OptionButton1.Value = True Then
+    Answer = "Bus"
+  Elseif UserForm3.OptionButton2.Value = True Then
+    Answer = "Car"
+  Elseif UserForm3.OptionButton3.Value = True Then
+    Answer = "Flight"
+  Elseif UserForm3.OptionButton4.Value = True Then
+    Answer = "Train"
+  Else
+    Answer = "Choose an option"
+  End If
+
+  MsgBox "You have selected" & Answer
+
+End Sub
+
+
+
+Private Sub CommandButton1_Click()
+  Dim Answer As String
+  Dim OptionPicked As String
+  OptionPicked = "You have selected "
+
+  If UserForm3.OptionButton1.Value = True Then
+    Answer = OptionPicked & "Bus"
+  Elseif UserForm3.OptionButton2.Value = True Then
+    Answer = OptionPicked & "Car"
+  Elseif UserForm3.OptionButton3.Value = True Then
+    Answer = OptionPicked & "Flight"
+  Elseif UserForm3.OptionButton4.Value = True Then
+    Answer = OptionPicked & "Train"
+  Else
+    Answer = "Please choose an option"
+  End If
+
+  MsgBox Answer
+
+End Sub
 __________________________________________________
 
 94 | Excel VBA - Check Box
 
+Private Sub CommandButton1_Click()
 
+  If UserForm4.CheckBox1.Value = True Then
+    ThisWorkbook.Sheets(1).Range("Physics_Range").Value = ThisWorkbook.Sheets(1).Range("Physics_Range").Value + 1
+  End If
+
+  If UserForm4.CheckBox2.Value = True Then
+    ThisWorkbook.Sheets(1).Range("Maths_Range").Value = ThisWorkbook.Sheets(1).Range("Maths_Range").Value + 1
+  End If
+
+  If UserForm4.CheckBox3.Value = True Then
+    ThisWorkbook.Sheets(1).Range("Chemistry_Range").Value = ThisWorkbook.Sheets(1).Range("Chemistry_Range").Value + 1
+  End If
+
+End Sub
 __________________________________________________
 
 95 | Excel VBA - List Box
