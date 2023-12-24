@@ -1622,36 +1622,126 @@ __________________________________________________
 
 84 | Excel VBA - 1D Array Static
 
+Sub Static_1D_Array()
+  Dim marks(3) As Integer
 
+  marks(0) = 10
+  marks(1) = 20
+  marks(2) = 30
+  marks(3) = 55
+
+  For i = 0 To 3
+    MsgBox marks(i)
+  Next
+
+End Sub
 __________________________________________________
 
 85 | Excel VBA - 2D Array Static
 
+Sub Satic_2D_Array_Example()
+  Dim a(2, 2) As Integer
 
+  a(0, 0) = 10
+  a(0, 1) = 20
+  a(0, 2) = 30
+
+  a(1, 0) = 40
+  a(1, 1) = 50
+  a(1, 2) = 60
+
+  a(2, 0) = 70
+  a(2, 1) = 80
+  a(2, 2) = 90
+
+  For i = 0 To 2
+    For j = 0 To 2
+      MsgBox a(i, j)
+    Next
+  Next
+
+End Sub
 __________________________________________________
 
 86 | Excel VBA - Dynamic Array
 
+Sub UsingReDim()
+  Dim a() As Integer
 
+  ReDim a(2)
+
+  a(0) = 10
+  a(1) = 20
+  a(2) = 30
+
+
+  ReDim Preserve a(4)
+  ' If you use "Preserve", it will keep those previous values.
+
+
+  ReDim a(4)
+  ' Because you re-defined an array, the whole array is erased, so this would show 0s.
+  ' They need to be re-defined after this.
+
+  MsgBox a(0)
+  MsgBox a(1)
+  MsgBox a(2)
+
+End Sub
 __________________________________________________
 
 87 | Excel VBA - Worksheet Selection Change
 
+Private Sub Worksheet_SelectionChange(ByVal Target As Range)
 
+  Target.Interior.Color = vbRed
+  Target.Font.Color = vbYellow
+
+End Sub
 __________________________________________________
 
 88 | Excel VBA - Double Click
 
+' Not sure if Boolean is right here, it was not visible
+Private Sub Worksheet_BeforeDoubleClick(ByVal Target As Range, Cancel As Boolean)
 
+  Target.Interior.Color = vbGreen
+  MsgBox "You have clicked twice"
+
+End Sub
 __________________________________________________
 
 89 | Excel VBA - Sheet Activate
 
+Private Sub Worksheet_Activate()
 
+  MsgBox "Welcome to the Sheet3"
+
+End Sub
 __________________________________________________
 
 90 | Excel VBA - Workbook Open
 
+Private Sub Workbook_Open()
+
+  MsgBox "Welcome to Events"
+
+End Sub
+
+
+Private Sub Workbook_Open()
+
+  a = InputBox("Enter the password")
+
+  If a = 123 Then
+    MsgBox "Welcome to Events"
+  Else
+    MsgBox "Incorrect Password"
+    ThisWorkbook.Save
+    ThisWorkbook.Close
+  End If
+
+End Sub
 
 __________________________________________________
 
